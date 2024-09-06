@@ -1,5 +1,6 @@
 # The Ramen Database Project
-Warm up project for CS3050 Software Engineering. \n
+Warm up project for CS3050 Software Engineering.
+
 Created by: Zoe Bell, Bradon Soucy, Jack Klug, and Nora Garcia
 
 Here we should write about our development plan, instructions and documentation to keep track of what others are doing.
