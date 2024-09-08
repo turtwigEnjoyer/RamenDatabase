@@ -1,0 +1,1343 @@
+[
+  {
+    "Review #": 2580,
+    "Brand": "New Touch",
+    "Variety": "T's Restaurant Tantanmen",
+    "Style": "Cup",
+    "Country": "Japan",
+    "Stars": 3.75,
+    "Top Ten": ""
+  },
+  {
+    "Review #": 2579,
+    "Brand": "Just Way",
+    "Variety": "Noodles Spicy Hot Sesame Spicy Hot Sesame Guan-miao Noodles",
+    "Style": "Pack",
+    "Country": "Taiwan",
+    "Stars": 1,
+    "Top Ten": ""
+  },
+  {
+    "Review #": 2578,
+    "Brand": "Nissin",
+    "Variety": "Cup Noodles Chicken Vegetable",
+    "Style": "Cup",
+    "Country": "USA",
+    "Stars": 2.25,
+    "Top Ten": ""
+  },
+  {
+    "Review #": 2577,
+    "Brand": "Wei Lih",
+    "Variety": "GGE Ramen Snack Tomato Flavor",
+    "Style": "Pack",
+    "Country": "Taiwan",
+    "Stars": 2.75,
+    "Top Ten": ""
+  },
+  {
+    "Review #": 2576,
+    "Brand": "Ching's Secret",
+    "Variety": "Singapore Curry",
+    "Style": "Pack",
+    "Country": "India",
+    "Stars": 3.75,
+    "Top Ten": ""
+  },
+  {
+    "Review #": 2575,
+    "Brand": "Samyang Foods",
+    "Variety": "Kimchi song Song Ramen",
+    "Style": "Pack",
+    "Country": "South Korea",
+    "Stars": 4.75,
+    "Top Ten": ""
+  },
+  {
+    "Review #": 2574,
+    "Brand": "Acecook",
+    "Variety": "Spice Deli Tantan Men With Cilantro",
+    "Style": "Cup",
+    "Country": "Japan",
+    "Stars": 4,
+    "Top Ten": ""
+  },
+  {
+    "Review #": 2573,
+    "Brand": "Ikeda Shoku",
+    "Variety": "Nabeyaki Kitsune Udon",
+    "Style": "Tray",
+    "Country": "Japan",
+    "Stars": 3.75,
+    "Top Ten": ""
+  },
+  {
+    "Review #": 2572,
+    "Brand": "Ripe'n'Dry",
+    "Variety": "Hokkaido Soy Sauce Ramen",
+    "Style": "Pack",
+    "Country": "Japan",
+    "Stars": 0.25,
+    "Top Ten": ""
+  },
+  {
+    "Review #": 2571,
+    "Brand": "KOKA",
+    "Variety": "The Original Spicy Stir-Fried Noodles",
+    "Style": "Pack",
+    "Country": "Singapore",
+    "Stars": 2.5,
+    "Top Ten": ""
+  },
+  {
+    "Review #": 2570,
+    "Brand": "Tao Kae Noi",
+    "Variety": "Creamy tom Yum Kung Flavour",
+    "Style": "Pack",
+    "Country": "Thailand",
+    "Stars": 5,
+    "Top Ten": ""
+  },
+  {
+    "Review #": 2569,
+    "Brand": "Yamachan",
+    "Variety": "Yokohama Tonkotsu Shoyu",
+    "Style": "Pack",
+    "Country": "USA",
+    "Stars": 5,
+    "Top Ten": ""
+  },
+  {
+    "Review #": 2568,
+    "Brand": "Nongshim",
+    "Variety": "Mr. Bibim Stir-Fried Kimchi Flavor",
+    "Style": "Pack",
+    "Country": "South Korea",
+    "Stars": 4.25,
+    "Top Ten": ""
+  },
+  {
+    "Review #": 2567,
+    "Brand": "Nissin",
+    "Variety": "Deka Buto Kimchi Pork Flavor",
+    "Style": "Bowl",
+    "Country": "Japan",
+    "Stars": 4.5,
+    "Top Ten": ""
+  },
+  {
+    "Review #": 2566,
+    "Brand": "Nissin",
+    "Variety": "Demae Ramen Bar Noodle Aka Tonkotsu Flavour Instant Noodle",
+    "Style": "Pack",
+    "Country": "Hong Kong",
+    "Stars": 5,
+    "Top Ten": ""
+  },
+  {
+    "Review #": 2565,
+    "Brand": "KOKA",
+    "Variety": "Mushroom Flavour Instant Noodles",
+    "Style": "Cup",
+    "Country": "Singapore",
+    "Stars": 3.5,
+    "Top Ten": ""
+  },
+  {
+    "Review #": 2564,
+    "Brand": "TRDP",
+    "Variety": "Mario Masala Noodles",
+    "Style": "Pack",
+    "Country": "India",
+    "Stars": 3.75,
+    "Top Ten": ""
+  },
+  {
+    "Review #": 2563,
+    "Brand": "Yamachan",
+    "Variety": "Tokyo Shoyu Ramen",
+    "Style": "Pack",
+    "Country": "USA",
+    "Stars": 5,
+    "Top Ten": ""
+  },
+  {
+    "Review #": 2562,
+    "Brand": "Binh Tay",
+    "Variety": "Mi Hai Cua",
+    "Style": "Pack",
+    "Country": "Vietnam",
+    "Stars": 4,
+    "Top Ten": ""
+  },
+  {
+    "Review #": 2561,
+    "Brand": "Paldo",
+    "Variety": "Premium Gomtang",
+    "Style": "Pack",
+    "Country": "South Korea",
+    "Stars": 4,
+    "Top Ten": ""
+  },
+  {
+    "Review #": 2560,
+    "Brand": "Nissin",
+    "Variety": "Cup Noodles Laksa Flavour",
+    "Style": "Cup",
+    "Country": "Hong Kong",
+    "Stars": 4.25,
+    "Top Ten": ""
+  },
+  {
+    "Review #": 2559,
+    "Brand": "Jackpot Teriyaki",
+    "Variety": "Beef Ramen",
+    "Style": "Pack",
+    "Country": "USA",
+    "Stars": 5,
+    "Top Ten": ""
+  },
+  {
+    "Review #": 2558,
+    "Brand": "KOKA",
+    "Variety": "Creamy Soup With Crushed Noodles Hot & Sour Fish Flavor",
+    "Style": "Cup",
+    "Country": "Singapore",
+    "Stars": 5,
+    "Top Ten": ""
+  },
+  {
+    "Review #": 2557,
+    "Brand": "Yamachan",
+    "Variety": "Sapporo Miso Ramen",
+    "Style": "Pack",
+    "Country": "USA",
+    "Stars": 4.75,
+    "Top Ten": ""
+  },
+  {
+    "Review #": 2556,
+    "Brand": "Ching's Secret",
+    "Variety": "Hot Garlic Instant Noodles",
+    "Style": "Pack",
+    "Country": "India",
+    "Stars": 4.25,
+    "Top Ten": ""
+  },
+  {
+    "Review #": 2555,
+    "Brand": "Samyang Foods",
+    "Variety": "Song Song Kimchi Big Bowl",
+    "Style": "Bowl",
+    "Country": "South Korea",
+    "Stars": 4.25,
+    "Top Ten": ""
+  },
+  {
+    "Review #": 2554,
+    "Brand": "Yum-Mie",
+    "Variety": "Instant Noodles Beef In Light Soup Flavour",
+    "Style": "Pack",
+    "Country": "Ghana",
+    "Stars": 3.5,
+    "Top Ten": ""
+  },
+  {
+    "Review #": 2553,
+    "Brand": "Nissin",
+    "Variety": "Hakata Ramen Noodle White Tonkotsu",
+    "Style": "Bowl",
+    "Country": "Japan",
+    "Stars": 4.75,
+    "Top Ten": ""
+  },
+  {
+    "Review #": 2552,
+    "Brand": "MyKuali",
+    "Variety": "Penang White Curry Rice Vermicelli Soup",
+    "Style": "Bowl",
+    "Country": "Malaysia",
+    "Stars": 5,
+    "Top Ten": ""
+  },
+  {
+    "Review #": 2551,
+    "Brand": "KOKA",
+    "Variety": "Signature Tom Yum Flavor Instant Noodles",
+    "Style": "Pack",
+    "Country": "Singapore",
+    "Stars": 4,
+    "Top Ten": ""
+  },
+  {
+    "Review #": 2550,
+    "Brand": "Samyang Foods",
+    "Variety": "Paegaejang Ramen",
+    "Style": "Pack",
+    "Country": "South Korea",
+    "Stars": 5,
+    "Top Ten": ""
+  },
+  {
+    "Review #": 2549,
+    "Brand": "Nissin",
+    "Variety": "Gekikara Ramen Extra Hot Ramen Goreng",
+    "Style": "Pack",
+    "Country": "Indonesia",
+    "Stars": 4.5,
+    "Top Ten": ""
+  },
+  {
+    "Review #": 2548,
+    "Brand": "Ottogi",
+    "Variety": "Plain Instant Noodle No Soup Included",
+    "Style": "Pack",
+    "Country": "South Korea",
+    "Stars": "Unrated",
+    "Top Ten": ""
+  },
+  {
+    "Review #": 2547,
+    "Brand": "Sichuan Guangyou",
+    "Variety": "Chongqing Spicy Hot Noodles",
+    "Style": "Bowl",
+    "Country": "China",
+    "Stars": 4,
+    "Top Ten": ""
+  },
+  {
+    "Review #": 2546,
+    "Brand": "New Touch",
+    "Variety": "Sugo-Men Kyoto Backfat Shoyu Ramen",
+    "Style": "Bowl",
+    "Country": "Japan",
+    "Stars": 3.75,
+    "Top Ten": ""
+  },
+  {
+    "Review #": 2545,
+    "Brand": "KOKA",
+    "Variety": "Instant Noodles Laksa Singapura Flavour",
+    "Style": "Pack",
+    "Country": "Singapore",
+    "Stars": 5,
+    "Top Ten": ""
+  },
+  {
+    "Review #": 2544,
+    "Brand": "Lipton",
+    "Variety": "Cup-A-Soup Chicken Noodle With White Meat Instant Soup",
+    "Style": "Box",
+    "Country": "USA",
+    "Stars": 1.5,
+    "Top Ten": ""
+  },
+  {
+    "Review #": 2543,
+    "Brand": "KOKA",
+    "Variety": "Curry Flavour Instant Noodles",
+    "Style": "Cup",
+    "Country": "Singapore",
+    "Stars": 5,
+    "Top Ten": ""
+  },
+  {
+    "Review #": 2542,
+    "Brand": "Acecook",
+    "Variety": "Super Cup Yochan Ika Yakisoba",
+    "Style": "Tray",
+    "Country": "Japan",
+    "Stars": 1.5,
+    "Top Ten": ""
+  },
+  {
+    "Review #": 2541,
+    "Brand": "Nissin",
+    "Variety": "Cup Noodles Very Veggie Spicy Chicken Flavor Ramen Noodle Soup",
+    "Style": "Cup",
+    "Country": "USA",
+    "Stars": 5,
+    "Top Ten": ""
+  },
+  {
+    "Review #": 2540,
+    "Brand": "Wei Lih",
+    "Variety": "GGE Noodle Snack Wheat Crackers Mexican Spicy",
+    "Style": "Pack",
+    "Country": "Taiwan",
+    "Stars": 3.25,
+    "Top Ten": ""
+  },
+  {
+    "Review #": 2539,
+    "Brand": "Nissin",
+    "Variety": "Demae Iccho Tonkotsu Flavour Instant Noodle",
+    "Style": "Cup",
+    "Country": "Hong Kong",
+    "Stars": 3.75,
+    "Top Ten": ""
+  },
+  {
+    "Review #": 2538,
+    "Brand": "Nissin",
+    "Variety": "Cup Noodles Very Veggie Beef Flavor Ramen Noodle Soup",
+    "Style": "Cup",
+    "Country": "USA",
+    "Stars": 5,
+    "Top Ten": ""
+  },
+  {
+    "Review #": 2537,
+    "Brand": "Nissin",
+    "Variety": "Cup NoodlesTom Yam Seafood (More Shrimptacular)",
+    "Style": "Cup",
+    "Country": "Singapore",
+    "Stars": 5,
+    "Top Ten": ""
+  },
+  {
+    "Review #": 2536,
+    "Brand": "Lele",
+    "Variety": "Instant Noodles Beef",
+    "Style": "Pack",
+    "Country": "Ghana",
+    "Stars": 3.5,
+    "Top Ten": ""
+  },
+  {
+    "Review #": 2535,
+    "Brand": "Nissin",
+    "Variety": "Cup Noodles Very Veggie Chicken Flavor Ramen Noodle Soup",
+    "Style": "Cup",
+    "Country": "USA",
+    "Stars": 5,
+    "Top Ten": ""
+  },
+  {
+    "Review #": 2534,
+    "Brand": "Fujiwara",
+    "Variety": "Hokkaido Hakodate Shoyu Ramen",
+    "Style": "Pack",
+    "Country": "Japan",
+    "Stars": 4,
+    "Top Ten": ""
+  },
+  {
+    "Review #": 2533,
+    "Brand": "Nongshim",
+    "Variety": "Shin Ramyun Black",
+    "Style": "Pack",
+    "Country": "South Korea",
+    "Stars": 5,
+    "Top Ten": ""
+  },
+  {
+    "Review #": 2532,
+    "Brand": "Nissin",
+    "Variety": "Nippon Onomichi Ramen",
+    "Style": "Bowl",
+    "Country": "Japan",
+    "Stars": 4.75,
+    "Top Ten": ""
+  },
+  {
+    "Review #": 2531,
+    "Brand": "Uni-President",
+    "Variety": "Pickled Cabbage Beef",
+    "Style": "Pack",
+    "Country": "China",
+    "Stars": 4.25,
+    "Top Ten": ""
+  },
+  {
+    "Review #": 2530,
+    "Brand": "Ottogi",
+    "Variety": "Ppushu Ppushu Noodle Snack Honey Butter",
+    "Style": "Pack",
+    "Country": "South Korea",
+    "Stars": 2,
+    "Top Ten": ""
+  },
+  {
+    "Review #": 2529,
+    "Brand": "Maruchan",
+    "Variety": "Gotsumori Chanpon Ramen",
+    "Style": "Bowl",
+    "Country": "Japan",
+    "Stars": 4.5,
+    "Top Ten": ""
+  },
+  {
+    "Review #": 2528,
+    "Brand": "Prima",
+    "Variety": "Juzz's Mee Creamy Chicken Flavour (Export Version)",
+    "Style": "Pack",
+    "Country": "Singapore",
+    "Stars": 5,
+    "Top Ten": ""
+  },
+  {
+    "Review #": 2527,
+    "Brand": "Uni-President",
+    "Variety": "Mushroom Flavor",
+    "Style": "Pack",
+    "Country": "Vietnam",
+    "Stars": 0,
+    "Top Ten": ""
+  },
+  {
+    "Review #": 2526,
+    "Brand": "Samyang Foods",
+    "Variety": "Jjamppong Big Bowl",
+    "Style": "Bowl",
+    "Country": "South Korea",
+    "Stars": 4.5,
+    "Top Ten": ""
+  },
+  {
+    "Review #": 2525,
+    "Brand": "Sokensha",
+    "Variety": "Curry Udon",
+    "Style": "Pack",
+    "Country": "Japan",
+    "Stars": 3.5,
+    "Top Ten": ""
+  },
+  {
+    "Review #": 2524,
+    "Brand": "Nissin",
+    "Variety": "Straits Reborn Laksa",
+    "Style": "Pack",
+    "Country": "Singapore",
+    "Stars": 5,
+    "Top Ten": ""
+  },
+  {
+    "Review #": 2523,
+    "Brand": "Nongshim",
+    "Variety": "Budae Jjigae Noodle Soup",
+    "Style": "Pack",
+    "Country": "South Korea",
+    "Stars": 4.5,
+    "Top Ten": ""
+  },
+  {
+    "Review #": 2522,
+    "Brand": "Takamori",
+    "Variety": "Hearty Japanese Style Curry Udon",
+    "Style": "Pack",
+    "Country": "Japan",
+    "Stars": 5,
+    "Top Ten": ""
+  },
+  {
+    "Review #": 2521,
+    "Brand": "Nissin",
+    "Variety": "Cup Noodles Potato Chips Black Pepper Crab Flavour",
+    "Style": "Pack",
+    "Country": "Singapore",
+    "Stars": 4.5,
+    "Top Ten": ""
+  },
+  {
+    "Review #": 2520,
+    "Brand": "Nissin",
+    "Variety": "Cup Noodles Blacl Pepper Crab Flavour (More Angry Crab)",
+    "Style": "Cup",
+    "Country": "Singapore",
+    "Stars": 5,
+    "Top Ten": ""
+  },
+  {
+    "Review #": 2519,
+    "Brand": "Guava Story",
+    "Variety": "Anchovy Flavor Guava Rice Noodles",
+    "Style": "Tray",
+    "Country": "South Korea",
+    "Stars": 1,
+    "Top Ten": ""
+  },
+  {
+    "Review #": 2518,
+    "Brand": "Samurai Ramen",
+    "Variety": "Umami Ramen",
+    "Style": "Pack",
+    "Country": "Japan",
+    "Stars": 4,
+    "Top Ten": ""
+  },
+  {
+    "Review #": 2517,
+    "Brand": "Ikeda Shoku",
+    "Variety": "Nabeyaki Tempura Udoin",
+    "Style": "Bowl",
+    "Country": "Japan",
+    "Stars": 4.5,
+    "Top Ten": ""
+  },
+  {
+    "Review #": 2516,
+    "Brand": "Fujiwara",
+    "Variety": "Hokkaido Hakodate Miso Ramen",
+    "Style": "Pack",
+    "Country": "Japan",
+    "Stars": 3.5,
+    "Top Ten": ""
+  },
+  {
+    "Review #": 2515,
+    "Brand": "Uni-President",
+    "Variety": "Man Han Feast Spicy Beef Flavor Instant Noodles",
+    "Style": "Bowl",
+    "Country": "Taiwan",
+    "Stars": 5,
+    "Top Ten": ""
+  },
+  {
+    "Review #": 2514,
+    "Brand": "Ogasawara",
+    "Variety": "Kirin Giraffe Shoyu Ramen",
+    "Style": "Pack",
+    "Country": "Japan",
+    "Stars": 4.5,
+    "Top Ten": ""
+  },
+  {
+    "Review #": 2513,
+    "Brand": "Pringles",
+    "Variety": "Nissin Top Ramen Chicken Flavor Potato Crisps",
+    "Style": "Can",
+    "Country": "USA",
+    "Stars": 3.5,
+    "Top Ten": ""
+  },
+  {
+    "Review #": 2512,
+    "Brand": "Mom's Dry Noodle",
+    "Variety": "Dan Dan Noodle",
+    "Style": "Pack",
+    "Country": "Taiwan",
+    "Stars": 5,
+    "Top Ten": ""
+  },
+  {
+    "Review #": 2511,
+    "Brand": "Samyang Foods",
+    "Variety": "Samyang Ramen Classic Edition",
+    "Style": "Bowl",
+    "Country": "South Korea",
+    "Stars": 5,
+    "Top Ten": ""
+  },
+  {
+    "Review #": 2510,
+    "Brand": "MyKuali",
+    "Variety": "Penang Red Tom Yum Goong Noodle",
+    "Style": "Pack",
+    "Country": "Malaysia",
+    "Stars": 5,
+    "Top Ten": ""
+  },
+  {
+    "Review #": 2509,
+    "Brand": "Maggi",
+    "Variety": "Hot Heads Green Chilli Noodles",
+    "Style": "Pack",
+    "Country": "India",
+    "Stars": 3.5,
+    "Top Ten": ""
+  },
+  {
+    "Review #": 2508,
+    "Brand": "Samyang Foods",
+    "Variety": "Mala Buldak Bokkeummyun",
+    "Style": "Pack",
+    "Country": "South Korea",
+    "Stars": 3.75,
+    "Top Ten": ""
+  },
+  {
+    "Review #": 2507,
+    "Brand": "Indomie",
+    "Variety": "RMy Noodlez Rumput Laut",
+    "Style": "Pack",
+    "Country": "Indonesia",
+    "Stars": 4,
+    "Top Ten": ""
+  },
+  {
+    "Review #": 2506,
+    "Brand": "KOKA",
+    "Variety": "Delight Chicken Flavor Instant Non-Fried Noodles",
+    "Style": "Pack",
+    "Country": "Singapore",
+    "Stars": 3.75,
+    "Top Ten": ""
+  },
+  {
+    "Review #": 2505,
+    "Brand": "Acecook",
+    "Variety": "Super Cup Torigawa Shoyu",
+    "Style": "Bowl",
+    "Country": "Japan",
+    "Stars": 3.5,
+    "Top Ten": ""
+  },
+  {
+    "Review #": 2504,
+    "Brand": "Nongshim",
+    "Variety": "Shin Ramyun",
+    "Style": "Pack",
+    "Country": "South Korea",
+    "Stars": 3,
+    "Top Ten": ""
+  },
+  {
+    "Review #": 2503,
+    "Brand": "Sichuan Guangyou",
+    "Variety": "Sweet Potato Instant Noodle Sout-Hot Flavor",
+    "Style": "Bowl",
+    "Country": "China",
+    "Stars": 0,
+    "Top Ten": ""
+  },
+  {
+    "Review #": 2502,
+    "Brand": "Indomie",
+    "Variety": "Onion Chicken Flavor",
+    "Style": "Pack",
+    "Country": "Nigeria",
+    "Stars": 1.5,
+    "Top Ten": ""
+  },
+  {
+    "Review #": 2501,
+    "Brand": "Happy Cook",
+    "Variety": "Toona Paste Noodle",
+    "Style": "Pack",
+    "Country": "Taiwan",
+    "Stars": 4,
+    "Top Ten": ""
+  },
+  {
+    "Review #": 2500,
+    "Brand": "The Ramen Rater Select",
+    "Variety": "Supreme Creamy Tom Yum Noodle",
+    "Style": "Box",
+    "Country": "Malaysia",
+    "Stars": 5,
+    "Top Ten": ""
+  },
+  {
+    "Review #": 2499,
+    "Brand": "KOKA",
+    "Variety": "Creamy Soup With Crushed Noodles Chicken Flavor",
+    "Style": "Cup",
+    "Country": "Singapore",
+    "Stars": 5,
+    "Top Ten": ""
+  },
+  {
+    "Review #": 2498,
+    "Brand": "Nissin",
+    "Variety": "Demae Ramen Spicy Beef",
+    "Style": "Pack",
+    "Country": "Germany",
+    "Stars": 3.75,
+    "Top Ten": ""
+  },
+  {
+    "Review #": 2497,
+    "Brand": "Nissin",
+    "Variety": "Cup Noodles Spicy",
+    "Style": "Cup",
+    "Country": "Germany",
+    "Stars": 3.75,
+    "Top Ten": ""
+  },
+  {
+    "Review #": 2496,
+    "Brand": "Nissin",
+    "Variety": "Soba Thai",
+    "Style": "Pack",
+    "Country": "Germany",
+    "Stars": 4.5,
+    "Top Ten": ""
+  },
+  {
+    "Review #": 2495,
+    "Brand": "Nissin",
+    "Variety": "Cup Noodles Huhn (Chicken)",
+    "Style": "Cup",
+    "Country": "Germany",
+    "Stars": 3.75,
+    "Top Ten": ""
+  },
+  {
+    "Review #": 2494,
+    "Brand": "Nissin",
+    "Variety": "Demae Ramen Korean Kimchi",
+    "Style": "Pack",
+    "Country": "Germany",
+    "Stars": 3.5,
+    "Top Ten": ""
+  },
+  {
+    "Review #": 2493,
+    "Brand": "Nissin",
+    "Variety": "Cup Noodles Curry",
+    "Style": "Cup",
+    "Country": "Germany",
+    "Stars": 3.75,
+    "Top Ten": ""
+  },
+  {
+    "Review #": 2492,
+    "Brand": "Nissin",
+    "Variety": "Smack Chili",
+    "Style": "Pack",
+    "Country": "Hungary",
+    "Stars": 3.75,
+    "Top Ten": ""
+  },
+  {
+    "Review #": 2491,
+    "Brand": "Nissin",
+    "Variety": "Soba Yakitori Chicken",
+    "Style": "Cup",
+    "Country": "Germany",
+    "Stars": 5,
+    "Top Ten": ""
+  },
+  {
+    "Review #": 2490,
+    "Brand": "Nissin",
+    "Variety": "Demae Ramen Garlic Chicken",
+    "Style": "Pack",
+    "Country": "Germany",
+    "Stars": 3.5,
+    "Top Ten": ""
+  },
+  {
+    "Review #": 2489,
+    "Brand": "Nissin",
+    "Variety": "Cup Noodles Ente (Duck)",
+    "Style": "Cup",
+    "Country": "Germany",
+    "Stars": 3,
+    "Top Ten": ""
+  },
+  {
+    "Review #": 2488,
+    "Brand": "Nissin",
+    "Variety": "Demae Ramen Thai Tom Yum",
+    "Style": "Pack",
+    "Country": "Germany",
+    "Stars": 3.75,
+    "Top Ten": ""
+  },
+  {
+    "Review #": 2487,
+    "Brand": "Nissin",
+    "Variety": "Soba Sukiyaki Beef",
+    "Style": "Cup",
+    "Country": "Germany",
+    "Stars": 4.5,
+    "Top Ten": ""
+  },
+  {
+    "Review #": 2486,
+    "Brand": "Nissin",
+    "Variety": "Demae Ramen Spicy",
+    "Style": "Pack",
+    "Country": "Germany",
+    "Stars": 3.5,
+    "Top Ten": ""
+  },
+  {
+    "Review #": 2485,
+    "Brand": "Nissin",
+    "Variety": "Cup Noodles Shrimps",
+    "Style": "Cup",
+    "Country": "Germany",
+    "Stars": 3,
+    "Top Ten": ""
+  },
+  {
+    "Review #": 2484,
+    "Brand": "Nissin",
+    "Variety": "Demae Ramen Tokyo Soy Sauce",
+    "Style": "Pack",
+    "Country": "Germany",
+    "Stars": 4,
+    "Top Ten": ""
+  },
+  {
+    "Review #": 2483,
+    "Brand": "Paldo",
+    "Variety": "Bul Jjamppong",
+    "Style": "Bowl",
+    "Country": "South Korea",
+    "Stars": 5,
+    "Top Ten": ""
+  },
+  {
+    "Review #": 2482,
+    "Brand": "TTL",
+    "Variety": "Chicken With Chinese Shaoxing Wine",
+    "Style": "Pack",
+    "Country": "Taiwan",
+    "Stars": 4.75,
+    "Top Ten": ""
+  },
+  {
+    "Review #": 2481,
+    "Brand": "Samyang Foods",
+    "Variety": "Buldak Bokkeummyun",
+    "Style": "Cup",
+    "Country": "South Korea",
+    "Stars": 3.75,
+    "Top Ten": ""
+  },
+  {
+    "Review #": 2480,
+    "Brand": "Acecook",
+    "Variety": "Pork Wantan Men",
+    "Style": "Bowl",
+    "Country": "Japan",
+    "Stars": 4.25,
+    "Top Ten": ""
+  },
+  {
+    "Review #": 2479,
+    "Brand": "E-Zee",
+    "Variety": "Instant Noodles Chicken Flavour",
+    "Style": "Pack",
+    "Country": "Malaysia",
+    "Stars": 4,
+    "Top Ten": ""
+  },
+  {
+    "Review #": 2478,
+    "Brand": "Kiki Noodle",
+    "Variety": "Scallion Oil & Soy Sauce Noodle",
+    "Style": "Pack",
+    "Country": "Taiwan",
+    "Stars": 5,
+    "Top Ten": ""
+  },
+  {
+    "Review #": 2477,
+    "Brand": "Kiki Noodle",
+    "Variety": "Sichuan Spices Flavor Noodle",
+    "Style": "Pack",
+    "Country": "Taiwan",
+    "Stars": 5,
+    "Top Ten": ""
+  },
+  {
+    "Review #": 2476,
+    "Brand": "Samyang Foods",
+    "Variety": "Kimchi Stew Ramyun",
+    "Style": "Bowl",
+    "Country": "South Korea",
+    "Stars": 4,
+    "Top Ten": ""
+  },
+  {
+    "Review #": 2475,
+    "Brand": "Maruchan",
+    "Variety": "Seimen Red Spicy Dandan Men",
+    "Style": "Bowl",
+    "Country": "Japan",
+    "Stars": 4.75,
+    "Top Ten": ""
+  },
+  {
+    "Review #": 2474,
+    "Brand": "Ottogi",
+    "Variety": "Ppushu Ppushu Noodle Snack Chilli Cheese Flavor",
+    "Style": "Pack",
+    "Country": "South Korea",
+    "Stars": 4.25,
+    "Top Ten": ""
+  },
+  {
+    "Review #": 2473,
+    "Brand": "Tokyo Noodle",
+    "Variety": "Mini Instant Noodle Mild Curry Flavor",
+    "Style": "Pack",
+    "Country": "Japan",
+    "Stars": 2,
+    "Top Ten": ""
+  },
+  {
+    "Review #": 2472,
+    "Brand": "GGE",
+    "Variety": "Noodle Snack Wheat Cracks Seaweed Flavor",
+    "Style": "Pack",
+    "Country": "Taiwan",
+    "Stars": 3.5,
+    "Top Ten": ""
+  },
+  {
+    "Review #": 2471,
+    "Brand": "Nissin",
+    "Variety": "Cup Noodles Mini Seafood Flavour",
+    "Style": "Cup",
+    "Country": "Hong Kong",
+    "Stars": 5,
+    "Top Ten": ""
+  },
+  {
+    "Review #": 2470,
+    "Brand": "Myojo",
+    "Variety": "Udon Japanese Style Noodles With Soup Base Hot & Sour Flavor",
+    "Style": "Pack",
+    "Country": "USA",
+    "Stars": 3.75,
+    "Top Ten": ""
+  },
+  {
+    "Review #": 2469,
+    "Brand": "KOKA",
+    "Variety": "Signature Curry Flavor Instant Noodles",
+    "Style": "Cup",
+    "Country": "Singapore",
+    "Stars": 3.5,
+    "Top Ten": ""
+  },
+  {
+    "Review #": 2468,
+    "Brand": "Acecook",
+    "Variety": "Dossari Yasai Chanpon",
+    "Style": "Cup",
+    "Country": "Japan",
+    "Stars": 4.25,
+    "Top Ten": ""
+  },
+  {
+    "Review #": 2467,
+    "Brand": "Paldo",
+    "Variety": "Volcano Curry Kkokkomyun",
+    "Style": "Pack",
+    "Country": "South Korea",
+    "Stars": 3.5,
+    "Top Ten": ""
+  },
+  {
+    "Review #": 2466,
+    "Brand": "Sau Tao",
+    "Variety": "Instant Noodle King Pepper Duck Flavour Soup",
+    "Style": "Pack",
+    "Country": "Hong Kong",
+    "Stars": 4,
+    "Top Ten": ""
+  },
+  {
+    "Review #": 2465,
+    "Brand": "Nissin",
+    "Variety": "Cup Noodles XO Sauce Seafood",
+    "Style": "Cup",
+    "Country": "China",
+    "Stars": 3.75,
+    "Top Ten": ""
+  },
+  {
+    "Review #": 2464,
+    "Brand": "Wang",
+    "Variety": "Extreme Spicy Hot Chicken Flavor Udon",
+    "Style": "Bowl",
+    "Country": "South Korea",
+    "Stars": 2,
+    "Top Ten": ""
+  },
+  {
+    "Review #": 2463,
+    "Brand": "Nissin",
+    "Variety": "Gekikara Ramen Rasa Pedas",
+    "Style": "Pack",
+    "Country": "Indonesia",
+    "Stars": 3.25,
+    "Top Ten": ""
+  },
+  {
+    "Review #": 2462,
+    "Brand": "TTL",
+    "Variety": "Sesame Oil Chicken Noodle With Rice Wine",
+    "Style": "Bowl",
+    "Country": "Taiwan",
+    "Stars": 5,
+    "Top Ten": ""
+  },
+  {
+    "Review #": 2461,
+    "Brand": "Fujiwara",
+    "Variety": "Hokkaido Hakodate Shio Ramen",
+    "Style": "Pack",
+    "Country": "Japan",
+    "Stars": 4.5,
+    "Top Ten": ""
+  },
+  {
+    "Review #": 2460,
+    "Brand": "Daifuku",
+    "Variety": "Katsuo Bowl Udon",
+    "Style": "Bowl",
+    "Country": "USA",
+    "Stars": 5,
+    "Top Ten": ""
+  },
+  {
+    "Review #": 2459,
+    "Brand": "Nissin",
+    "Variety": "Cup Noodles MUG Shoyu & Seafood",
+    "Style": "Pack",
+    "Country": "Japan",
+    "Stars": 3.5,
+    "Top Ten": ""
+  },
+  {
+    "Review #": 2458,
+    "Brand": "Samyang Foods",
+    "Variety": "Sari Ramen",
+    "Style": "Pack",
+    "Country": "South Korea",
+    "Stars": "Unrated",
+    "Top Ten": ""
+  },
+  {
+    "Review #": 2457,
+    "Brand": "KOKA",
+    "Variety": "Instant Noodles Chicken Satay Flavour",
+    "Style": "Pack",
+    "Country": "Singapore",
+    "Stars": 3.5,
+    "Top Ten": ""
+  },
+  {
+    "Review #": 2456,
+    "Brand": "KOKA",
+    "Variety": "Signature Spicy Singapore Fried Noodles Instant Noodles",
+    "Style": "Pack",
+    "Country": "Singapore",
+    "Stars": 4.25,
+    "Top Ten": ""
+  },
+  {
+    "Review #": 2455,
+    "Brand": "KOKA",
+    "Variety": "Creamy Soup With Crushed Noodles Sweet Corn Flavor",
+    "Style": "Cup",
+    "Country": "Singapore",
+    "Stars": 5,
+    "Top Ten": ""
+  },
+  {
+    "Review #": 2454,
+    "Brand": "KOKA",
+    "Variety": "Silk Beef Pho Flavor Instant Rice Fettuccine",
+    "Style": "Bowl",
+    "Country": "Singapore",
+    "Stars": 3.25,
+    "Top Ten": ""
+  },
+  {
+    "Review #": 2453,
+    "Brand": "KOKA",
+    "Variety": "Delight Spicy Sesame Flavor Instant Non-Fried Noodles",
+    "Style": "Pack",
+    "Country": "Singapore",
+    "Stars": 4.5,
+    "Top Ten": ""
+  },
+  {
+    "Review #": 2452,
+    "Brand": "KOKA",
+    "Variety": "Signature Laksa Singapura Instant Noodles",
+    "Style": "Bowl",
+    "Country": "Singapore",
+    "Stars": 5,
+    "Top Ten": ""
+  },
+  {
+    "Review #": 2451,
+    "Brand": "KOKA",
+    "Variety": "Delight Spicy Black Pepper Flavor Instant Non-Fried Noodles",
+    "Style": "Pack",
+    "Country": "Singapore",
+    "Stars": 5,
+    "Top Ten": ""
+  },
+  {
+    "Review #": 2450,
+    "Brand": "KOKA",
+    "Variety": "Purple Wheat Noodles Chili & Lime Flavor",
+    "Style": "Pack",
+    "Country": "Singapore",
+    "Stars": 4,
+    "Top Ten": ""
+  },
+  {
+    "Review #": 2449,
+    "Brand": "KOKA",
+    "Variety": "Delight Tomato Flavor Instant Non-Fried Noodles",
+    "Style": "Pack",
+    "Country": "Singapore",
+    "Stars": 5,
+    "Top Ten": ""
+  },
+  {
+    "Review #": 2448,
+    "Brand": "KOKA",
+    "Variety": "Seafood Flavor Instant Noodles",
+    "Style": "Cup",
+    "Country": "Singapore",
+    "Stars": 3.5,
+    "Top Ten": ""
+  },
+  {
+    "Review #": 2447,
+    "Brand": "KOKA",
+    "Variety": "Signature Stir-Fry Original Flavor Instant Noodles",
+    "Style": "Pack",
+    "Country": "Singapore",
+    "Stars": 3,
+    "Top Ten": ""
+  },
+  {
+    "Review #": 2446,
+    "Brand": "KOKA",
+    "Variety": "Creamy Soup Witrh Crushed Noodles Curry Flavor",
+    "Style": "Cup",
+    "Country": "Singapore",
+    "Stars": 5,
+    "Top Ten": ""
+  },
+  {
+    "Review #": 2445,
+    "Brand": "KOKA",
+    "Variety": "Delight Laksa Singapura Flavor Instant Non-Fried Noodles",
+    "Style": "Pack",
+    "Country": "Singapore",
+    "Stars": 4.25,
+    "Top Ten": ""
+  },
+  {
+    "Review #": 2444,
+    "Brand": "KOKA",
+    "Variety": "Silk Spicy Marinara Instant Rice Fettuccine",
+    "Style": "Bowl",
+    "Country": "Singapore",
+    "Stars": 5,
+    "Top Ten": ""
+  },
+  {
+    "Review #": 2443,
+    "Brand": "KOKA",
+    "Variety": "Signature Chicken Flavor Instant Noodles",
+    "Style": "Cup",
+    "Country": "Singapore",
+    "Stars": 3.75,
+    "Top Ten": ""
+  },
+  {
+    "Review #": 2442,
+    "Brand": "Nissin",
+    "Variety": "Cup Noodles Sopa Nissin Hot Sauce Con Camaron",
+    "Style": "Cup",
+    "Country": "Mexico",
+    "Stars": 3.5,
+    "Top Ten": ""
+  },
+  {
+    "Review #": 2441,
+    "Brand": "MyKuali",
+    "Variety": "Penang Hokkien Prawn Flavor Noodle",
+    "Style": "Box",
+    "Country": "Japan",
+    "Stars": 5,
+    "Top Ten": ""
+  },
+  {
+    "Review #": 2440,
+    "Brand": "Master Kong",
+    "Variety": "Roasted Pork Noodle",
+    "Style": "Pack",
+    "Country": "China",
+    "Stars": 4.5,
+    "Top Ten": ""
+  },
+  {
+    "Review #": 2439,
+    "Brand": "Uni-President",
+    "Variety": "Man Han Feast Super Hot Pot Beef Flavor Instant Noodles",
+    "Style": "Bowl",
+    "Country": "Taiwan",
+    "Stars": 5,
+    "Top Ten": ""
+  },
+  {
+    "Review #": 2438,
+    "Brand": "World O' Noodle",
+    "Variety": "Mi Goreng Original Flavour Fried Noodles",
+    "Style": "Pack",
+    "Country": "Indonesia",
+    "Stars": 5,
+    "Top Ten": ""
+  },
+  {
+    "Review #": 2437,
+    "Brand": "Nissin",
+    "Variety": "Raoh Nojyuku Toro Tonkotsu Ramen",
+    "Style": "Bowl",
+    "Country": "Japan",
+    "Stars": 4.5,
+    "Top Ten": ""
+  },
+  {
+    "Review #": 2436,
+    "Brand": "Kang Shi Fu",
+    "Variety": "Artificial Dongpo's Braised Pork Flavour",
+    "Style": "Pack",
+    "Country": "Hong Kong",
+    "Stars": 4.75,
+    "Top Ten": ""
+  },
+  {
+    "Review #": 2435,
+    "Brand": "Mum Ngon",
+    "Variety": "Lau Tom Chua Cay",
+    "Style": "Pack",
+    "Country": "Vietnam",
+    "Stars": 3.5,
+    "Top Ten": ""
+  },
+  {
+    "Review #": 2434,
+    "Brand": "Happy Cook",
+    "Variety": "Old Beijing Fried Bean Sauce Noodle",
+    "Style": "Pack",
+    "Country": "Taiwan",
+    "Stars": 4.25,
+    "Top Ten": ""
+  },
+  {
+    "Review #": 2433,
+    "Brand": "Nissin",
+    "Variety": "Cup Noodles Indonesia Mie Goreng",
+    "Style": "Cup",
+    "Country": "Japan",
+    "Stars": 3.75,
+    "Top Ten": ""
+  },
+  {
+    "Review #": 2432,
+    "Brand": "Fashion Food",
+    "Variety": "Yummy Spicy Rice Soup With Seafood",
+    "Style": "Bowl",
+    "Country": "Thailand",
+    "Stars": 3.5,
+    "Top Ten": ""
+  }
+]
