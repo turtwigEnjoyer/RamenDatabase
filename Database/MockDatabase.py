@@ -1,10 +1,11 @@
+from Database.DbInterface import DbInterface
 from Entities import Ramen
 
 """
 Class used to mock a database functions without having a database
-    --> This makes implementation of database logic decoupled from other parts of the code and testing slightly easier
+Instead of having the logic of the database in code we just call the insert or query
 """
-class MockDatabase:
+class MockDatabase (DbInterface):
     def __init__(self, ramen_list: list):
         self.ramen_list = ramen_list
 
@@ -20,7 +21,7 @@ class MockDatabase:
     def simple_query(self, field: str, value: str):
         matching_objects = []
         for ramen in self.ramen_list:
-            field_value = getattr(ramen, field, None)[0]
+            field_value = getattr(ramen, field, None)
             if field_value == value:
                 matching_objects.append(ramen)
         return matching_objects

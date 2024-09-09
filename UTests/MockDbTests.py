@@ -2,6 +2,7 @@ from distutils.core import setup
 
 from Database import MockDatabase
 from Database import MockData
+from Entities import Ramen
 import unittest
 
 class MockDbTests(unittest.TestCase):
@@ -13,6 +14,7 @@ class MockDbTests(unittest.TestCase):
         self.MockDatabase = MockDatabase.MockDatabase( mock_data.RamenList)
         assert self.MockDatabase.ramen_list
 
+    """ Test we can query by generic fields """
     def testSimpleQuery(self):
         self.setUp()
 
@@ -20,3 +22,15 @@ class MockDbTests(unittest.TestCase):
 
         assert len(query_results) == 2
 
+    def testInsert(self):
+        self.setUp()
+
+        self.MockDatabase.insert( Ramen.Ramen( _id = 1,
+                         brand = "Yatekomo",
+                         variety = "a",
+                         style = "Chicken",
+                         stars = 5,
+                         country = "Spain",
+                         top_ten = "1") )
+
+        assert len(self.MockDatabase.ramen_list) == 3
