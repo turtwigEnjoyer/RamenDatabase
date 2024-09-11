@@ -5,3 +5,4 @@ class DbInterface:
 
     def simple_query(self, field: str, value: str) -> list[Ramen]:
         pass
+
