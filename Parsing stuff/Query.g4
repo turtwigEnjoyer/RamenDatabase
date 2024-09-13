@@ -14,18 +14,12 @@ expr: identifier op=('==' | '<' | '>' | '<=' | '>=' | '!=') identifier #compare
     | expr op=(AND | OR) expr                                          #join
     ;
 
-identifier: ID          #id
-          | INT         #val
+identifier:  ID          #id
+          | INT          #val
           ;
 
 AND: 'AND';
 OR: 'OR';
-
-ID : [a-zA-Z]+ ;
-INT: [0-9]+ ;
-NEWLINE : '\r'? '\n' ;
-WS : [ \t]+ -> skip ;
-ANY: . ;
 
 EQ: '==';
 LT: '<';
@@ -33,3 +27,10 @@ GT: '>';
 LTEQ: '<=';
 GTEQ: '>=';
 NEQ: '!=';
+
+ID : [a-zA-Z]+ ;
+INT: [0-9]+ ;
+NEWLINE : '\r'? '\n' ;
+WS : [ \t]+ -> skip ;
+ANY: . ;
+
