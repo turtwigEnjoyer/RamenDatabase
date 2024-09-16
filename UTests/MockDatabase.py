@@ -1,11 +1,11 @@
-from Database.DbInterface import DbInterface
-from Entities import Ramen
+from Firebase.AbstractDb import AbstractDb
+from Firebase.Ramen import Ramen
 
 """
 Class used to mock a database functions without having a database
 Instead of having the logic of the database in code we just call the insert or query
 """
-class MockDatabase (DbInterface):
+class MockDatabase (AbstractDb):
     def __init__(self, ramen_list: list):
         self.ramen_list = ramen_list
 

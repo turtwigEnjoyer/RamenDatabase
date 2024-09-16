@@ -1,7 +1,4 @@
-from distutils.core import setup
-
-from Database import MockDatabase
-from Database import MockData
+from UTests import MockData, MockDatabase
 from Entities import Ramen
 import unittest
 
@@ -11,7 +8,7 @@ class MockDbTests(unittest.TestCase):
     """
     def setUp(self):
         mock_data = MockData.MockData()
-        self.MockDatabase = MockDatabase.MockDatabase( mock_data.RamenList)
+        self.MockDatabase = MockDatabase.MockDatabase(mock_data.RamenList)
         assert self.MockDatabase.ramen_list
 
     """ Test we can query by generic fields """
