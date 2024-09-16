@@ -1,7 +1,7 @@
 """ Should take an input JSON file and upload it to the cloud database """
 import json
 
-from Database.DbInterface import DbInterface
+from Database import DbInterface
 from Entities.Ramen import Ramen
 
 class JSONLoader:
