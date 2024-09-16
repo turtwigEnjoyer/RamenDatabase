@@ -14,6 +14,11 @@ class QueryVisitor(ParseTreeVisitor):
         return self.visitChildren(ctx)
 
 
+    # Visit a parse tree produced by QueryParser#printJoin.
+    def visitPrintJoin(self, ctx:QueryParser.PrintJoinContext):
+        return self.visitChildren(ctx)
+
+
     # Visit a parse tree produced by QueryParser#printExpr.
     def visitPrintExpr(self, ctx:QueryParser.PrintExprContext):
         return self.visitChildren(ctx)
@@ -29,18 +34,13 @@ class QueryVisitor(ParseTreeVisitor):
         return self.visitChildren(ctx)
 
 
-    # Visit a parse tree produced by QueryParser#join.
-    def visitJoin(self, ctx:QueryParser.JoinContext):
-        return self.visitChildren(ctx)
-
-
     # Visit a parse tree produced by QueryParser#id.
     def visitId(self, ctx:QueryParser.IdContext):
         return self.visitChildren(ctx)
 
 
-    # Visit a parse tree produced by QueryParser#val.
-    def visitVal(self, ctx:QueryParser.ValContext):
+    # Visit a parse tree produced by QueryParser#int.
+    def visitInt(self, ctx:QueryParser.IntContext):
         return self.visitChildren(ctx)
 
 

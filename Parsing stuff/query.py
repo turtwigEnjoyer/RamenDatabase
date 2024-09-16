@@ -12,33 +12,56 @@ from QueryListener import QueryListener
 #
 class MyVisitor(QueryVisitor):
     def __init__(self):
-        self.left = ""
-        self.right = ""
+        self.storage = []
+
+    def visitPrintJoin(self, ctx):
+        container = self.visit(ctx.expr(0))
+        marker = 0
+        if container not in self.storage:
+            marker += 1
+            self.storage.append(container)
+        container = self.visit(ctx.expr(1))
+        if container not in self.storage:
+            marker += 1
+            self.storage.append(container)
+        #if marker > 0:
+            #print(self.storage)
+        return self.storage
 
     def visitPrintExpr(self, ctx):
-        value = self.visit(ctx.expr())
-        print(value)
-        return value
-
-    def visitVal(self, ctx):
-        return ctx.VAL
+        container = self.visit(ctx.expr())
+        self.storage.append(container)
+        #print(self.storage)
+        return self.storage
 
     def visitCompare(self, ctx):
-        left = self.visit(ctx.expression(0))
-        right = self.visit(ctx.expression(1))
-        return ctx.op.type
+        left = ctx.ID().getText()
+        right = self.visit(ctx.val())
+        op = ctx.op.text
+        container = (left, op, right)
+        return container
 
-    def visitJoin(self, ctx):
-        return ctx.op.type
+    def visitId(self, ctx):
+        return ctx.ID().getText()
+
+    def visitInt(self, ctx):
+        return int(ctx.INT().getText())
 
 
+# Test main method that shows the use of visitor this shows all the setup for utilizing an antlr visitor class
+# Ideally nobody should need to download antlr or anything because all the classes required are pre-generated in the
+# repo. We will have to change this file to be just a class definition file for the visitor and then implement the
+# below code in the query engine. This code will then be hooked up to user input to parse each incoming query. It will
+# then be sent to the interface that filters and collects the data from the database finally that filtered data will
+# be printed onscreen for the user's pleasure
 def main():
-    stream = InputStream("country != Japan AND ratings <= 4\n")
+    stream = InputStream("Country <= Japan AND ratings > 4\n")
     lexer = QueryLexer(stream)
     stream = CommonTokenStream(lexer)
     parser = QueryParser(stream)
     tree = parser.prog()
     visitor = MyVisitor()
+    # return tree.accept(visitor)
     output = visitor.visit(tree)
     print(output)
     return 0

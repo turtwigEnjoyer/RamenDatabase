@@ -17,6 +17,15 @@ class QueryListener(ParseTreeListener):
         pass
 
 
+    # Enter a parse tree produced by QueryParser#printJoin.
+    def enterPrintJoin(self, ctx:QueryParser.PrintJoinContext):
+        pass
+
+    # Exit a parse tree produced by QueryParser#printJoin.
+    def exitPrintJoin(self, ctx:QueryParser.PrintJoinContext):
+        pass
+
+
     # Enter a parse tree produced by QueryParser#printExpr.
     def enterPrintExpr(self, ctx:QueryParser.PrintExprContext):
         pass
@@ -44,15 +53,6 @@ class QueryListener(ParseTreeListener):
         pass
 
 
-    # Enter a parse tree produced by QueryParser#join.
-    def enterJoin(self, ctx:QueryParser.JoinContext):
-        pass
-
-    # Exit a parse tree produced by QueryParser#join.
-    def exitJoin(self, ctx:QueryParser.JoinContext):
-        pass
-
-
     # Enter a parse tree produced by QueryParser#id.
     def enterId(self, ctx:QueryParser.IdContext):
         pass
@@ -62,12 +62,12 @@ class QueryListener(ParseTreeListener):
         pass
 
 
-    # Enter a parse tree produced by QueryParser#val.
-    def enterVal(self, ctx:QueryParser.ValContext):
+    # Enter a parse tree produced by QueryParser#int.
+    def enterInt(self, ctx:QueryParser.IntContext):
         pass
 
-    # Exit a parse tree produced by QueryParser#val.
-    def exitVal(self, ctx:QueryParser.ValContext):
+    # Exit a parse tree produced by QueryParser#int.
+    def exitInt(self, ctx:QueryParser.IntContext):
         pass
 
 

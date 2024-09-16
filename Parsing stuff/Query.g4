@@ -6,17 +6,17 @@ options {
 
 prog: command+ ;
 
-command: expr NEWLINE   #printExpr
+command: expr op=(AND | OR) expr NEWLINE    #printJoin
+       | expr NEWLINE                       #printExpr
        | NEWLINE        #blank
        ;
 
-expr: identifier op=('==' | '<' | '>' | '<=' | '>=' | '!=') identifier #compare
-    | expr op=(AND | OR) expr                                          #join
+expr: ID op=('==' | '<' | '>' | '<=' | '>=' | '!=') val #compare
     ;
 
-identifier:  ID          #id
-          | INT          #val
-          ;
+val: ID        #id
+   | INT       #int
+   ;
 
 AND: 'AND';
 OR: 'OR';
