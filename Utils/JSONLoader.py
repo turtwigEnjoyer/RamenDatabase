@@ -2,7 +2,7 @@
 import json
 
 from Database.DbInterface import DbInterface
-from Entities import Ramen
+from Entities.Ramen import Ramen
 
 class JSONLoader:
     def __init__(self, database_context: DbInterface):
@@ -10,7 +10,7 @@ class JSONLoader:
 
     @staticmethod
     def json_to_ramen(json_string):
-        return Ramen.Ramen(**json_string)
+        return Ramen(**json_string)
 
     @staticmethod
     def json_to_ramen_list( json_filename) -> list[Ramen]:
