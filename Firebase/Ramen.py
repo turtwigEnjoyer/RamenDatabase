@@ -20,7 +20,7 @@ class Ramen:
         return {"_id": self.Id, "brand": self.Brand, "variety": self.Variety, "style": self.Style, "country": self.Country, "stars": self.Stars, "top_ten": self.Top_Ten}
 
     @classmethod
-    def from_dict(self, ramen: dict) -> None:
+    def from_dict(self, ramen: dict):
         self.Id = ramen["_id"]
         self.Brand = ramen["brand"]
         self.Variety = ramen["variety"]
@@ -28,6 +28,8 @@ class Ramen:
         self.Country = ramen["country"]
         self.Stars = ramen["stars"]
         self.Top_Ten = ramen["top_ten"]
+
+        return self
 
 
         

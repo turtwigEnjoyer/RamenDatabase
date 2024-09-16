@@ -1,5 +1,7 @@
 import Ramen
+import QueryFilter
 class AbstractDb:
+
     def __init__(self):
         pass
 
@@ -7,5 +9,5 @@ class AbstractDb:
     def insert(self, ramen_object: Ramen) -> None:
         pass
 
-    def simple_query(self, field: str, comp: str, value) -> list[Ramen]:
+    def simple_query(self, query_filter: QueryFilter) -> list[Ramen]:
         pass
