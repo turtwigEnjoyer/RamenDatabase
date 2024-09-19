@@ -5,6 +5,7 @@ from QueryParser import QueryParser
 from QueryLexer import QueryLexer
 from QueryVisitor import QueryVisitor
 from QueryListener import QueryListener
+from Firebase.QueryFilter import QueryFilter
 
 
 # overwrites generated visitor from the antlr grammar to do the things we actually want it to do
@@ -38,7 +39,7 @@ class MyVisitor(QueryVisitor):
         left = ctx.ID().getText()
         right = self.visit(ctx.val())
         op = ctx.op.text
-        container = (left, op, right)
+        container = QueryFilter(left, op, right)
         return container
 
     def visitId(self, ctx):
@@ -63,7 +64,8 @@ def main():
     visitor = MyVisitor()
     # return tree.accept(visitor)
     output = visitor.visit(tree)
-    print(output)
+    for x in output:
+        print(x)
     return 0
 
 
