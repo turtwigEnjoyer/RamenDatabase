@@ -14,19 +14,19 @@ class DbInterface(AbstractDb):
     """
         Creates a Database and then handles record insertion as well as query execution
     """
-    def __init__(self):
+    def __init__(self, collection_name):
         super().__init__()
         # Use a service account.
         cred = credentials.Certificate('./cs3050-warmup-project-17f83-firebase-adminsdk-1gomb-858737ebab.json')
         firebase_admin.initialize_app(cred)
         self.db = firestore.client()
-        self.collection = self.db.collection("ramen_ratings")
+        self.collection = self.db.collection(collection_name)
     
     # Receives a Ramen object to insert to DB
     def insert(self, ramen_object: Ramen) -> None:
         # convert to dict to easily pass to DB, then pass to DB using _id as the unique id
         ram_obj_dict = ramen_object.to_dict()
-        doc_ref = self.db.collection("ramen_ratings").document(str(ram_obj_dict.pop("_id")))
+        doc_ref = self.collection.document(str(ram_obj_dict.pop("_id")))
         doc_ref.set(ram_obj_dict) 
 
     # Executes queries to the DB using filtering to retrieve the desired data
@@ -39,9 +39,13 @@ class DbInterface(AbstractDb):
 
         return self.query_results_to_list(query_results)
 
-
+    """
+    Runs a query with unlimited AND statements. Takes in lists of filters
+    Careful! Will throw exception if we attempt to run a compound query that uses operators other than ==
+    on fields other than stars.
+    If we dont want an exception we need to create an index manually 
+    """
     def compound_query(self, query_filters: list[QueryFilter]) -> list[Ramen]:
-
 
         filtered_collection = self.collection
         for query_filter in query_filters:
@@ -50,6 +54,7 @@ class DbInterface(AbstractDb):
 
         query_results = filtered_collection.stream()
         return self.query_results_to_list(query_results)
+
 
     @staticmethod
     def query_results_to_list(query_results) -> list[Ramen]:
