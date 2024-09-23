@@ -58,7 +58,7 @@ class MyVisitor(QueryVisitor):
 # then be sent to the interface that filters and collects the data from the database finally that filtered data will
 # be printed onscreen for the user's pleasure
 def main(): #test
-    stream = InputStream("Country == Japan\n")
+    stream = InputStream('Country == "New Zealand"\n')
     lexer = QueryLexer(stream)
     stream = CommonTokenStream(lexer)
     parser = QueryParser(stream)
@@ -70,4 +70,4 @@ def main(): #test
     return 0
 
 
-#main()
+main()
