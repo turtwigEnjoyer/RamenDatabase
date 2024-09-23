@@ -10,7 +10,7 @@ else:
 
 def serializedATN():
     return [
-        4,1,13,33,2,0,7,0,2,1,7,1,2,2,7,2,2,3,7,3,1,0,4,0,10,8,0,11,0,12,
+        4,1,14,33,2,0,7,0,2,1,7,1,2,2,7,2,2,3,7,3,1,0,4,0,10,8,0,11,0,12,
         0,11,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,3,1,23,8,1,1,2,1,2,1,2,
         1,2,1,3,1,3,3,3,31,8,3,1,3,0,0,4,0,2,4,6,0,2,1,0,1,2,1,0,3,8,32,
         0,9,1,0,0,0,2,22,1,0,0,0,4,24,1,0,0,0,6,30,1,0,0,0,8,10,3,2,1,0,
@@ -36,7 +36,8 @@ class QueryParser ( Parser ):
                      "'<='", "'>='", "'!='" ]
 
     symbolicNames = [ "<INVALID>", "AND", "OR", "EQ", "LT", "GT", "LTEQ", 
-                      "GTEQ", "NEQ", "ID", "INT", "NEWLINE", "WS", "ANY" ]
+                      "GTEQ", "NEQ", "ID", "INT", "NEWLINE", "WS", "ANY", 
+                      "QUOTED_ID" ]
 
     RULE_prog = 0
     RULE_command = 1
@@ -59,6 +60,7 @@ class QueryParser ( Parser ):
     NEWLINE=11
     WS=12
     ANY=13
+    QUOTED_ID=14
 
     def __init__(self, input:TokenStream, output:TextIO = sys.stdout):
         super().__init__(input, output)

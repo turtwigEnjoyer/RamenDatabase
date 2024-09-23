@@ -28,9 +28,10 @@ LTEQ: '<=';
 GTEQ: '>=';
 NEQ: '!=';
 
-ID : [a-zA-Z]+ ;
+ID : [a-zA-Z]+ | QUOTED_ID ;
 INT: [0-9]+ ;
 NEWLINE : '\r'? '\n' ;
 WS : [ \t]+ -> skip ;
 ANY: . ;
 
+QUOTED_ID : '"' [a-zA-Z ]+ '"' ;

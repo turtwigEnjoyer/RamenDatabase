@@ -43,7 +43,9 @@ class MyVisitor(QueryVisitor):
         return container
 
     def visitId(self, ctx):
-        return ctx.ID().getText()
+        identifier = ctx.ID().getText()
+        identifier = identifier.strip('"')
+        return identifier
 
     def visitInt(self, ctx):
         return int(ctx.INT().getText())
