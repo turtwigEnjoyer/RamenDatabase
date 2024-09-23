@@ -14,13 +14,13 @@ class DbInterface(AbstractDb):
     """
         Creates a Database and then handles record insertion as well as query execution
     """
-    def __init__(self, collection_name):
+    def __init__(self):
         super().__init__()
         # Use a service account.
         cred = credentials.Certificate('./cs3050-warmup-project-17f83-firebase-adminsdk-1gomb-858737ebab.json')
         firebase_admin.initialize_app(cred)
         self.db = firestore.client()
-        self.collection = self.db.collection(collection_name)
+        self.collection = self.db.collection("ramen_ratings")
     
     # Receives a Ramen object to insert to DB
     def insert(self, ramen_object: Ramen) -> None:
