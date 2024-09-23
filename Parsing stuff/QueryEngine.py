@@ -1,11 +1,17 @@
+from antlr4 import *
 from QueryParser import QueryParser
 from QueryLexer import QueryLexer
+from QueryVisitor import QueryVisitor
+from QueryListener import QueryListener
+from Firebase.QueryFilter import QueryFilter
+from query import MyVisitor
 
 def query_engine(query):
     try:
-        lexer = QueryLexer(query)
-        query = lexer.getQuery()
-        parser = QueryParser(query)
+        stream = InputStream(query)
+        lexer = QueryLexer(stream)
+        stream = CommonTokenStream(lexer)
+        parser = QueryParser(stream)
         tree = parser.prog()
         visitor = MyVisitor()
         output = visitor.visit(tree)
@@ -17,9 +23,10 @@ def query_engine(query):
 
 
 def menu():
-    print("Welcome: To get information about various types of Ramen, enter a query such as 'Country: Japan and Stars: > 5'")
+    print("Welcome: To get information about various types of Ramen, enter a query such as 'Country == Japan and "
+          "Stars: > 5'")
     print("Available filters are: Brand, Country, Style, Variety, Stars")
-    print('Use 'and' to combine up to two filters')
+    print('Use "AND" to combine up to two filters')
     print("Type 'help' for full list of available commands")
     print("Type 'quit' to quit")
 

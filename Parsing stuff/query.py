@@ -55,18 +55,17 @@ class MyVisitor(QueryVisitor):
 # below code in the query engine. This code will then be hooked up to user input to parse each incoming query. It will
 # then be sent to the interface that filters and collects the data from the database finally that filtered data will
 # be printed onscreen for the user's pleasure
-def main():
-    stream = InputStream("Country <= Japan AND ratings > 4\n")
+def main(): #test
+    stream = InputStream("Country == Japan\n")
     lexer = QueryLexer(stream)
     stream = CommonTokenStream(lexer)
     parser = QueryParser(stream)
     tree = parser.prog()
     visitor = MyVisitor()
-    # return tree.accept(visitor)
     output = visitor.visit(tree)
     for x in output:
         print(x)
     return 0
 
 
-main()
+#main()
