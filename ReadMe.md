@@ -6,6 +6,15 @@ Created by: Zoe Bell, Bradon Soucy, Jack Klug, and Nora Garcia
 Here we should write about our development plan, instructions and documentation to keep track of what others are doing.
 - Firebase documentation and notes will be [here](docs/Firebase.md)
 
+## Necessary packages
+
+``` pip install antlr4-python3-runtime ```
+
+``` pip install google-cloud-firestore ```
+
+``` pip install firebase-admin ```
+
+    
 
 ## Description of Data
 * Source: https://www.kaggle.com/datasets/residentmario/ramen-ratings
