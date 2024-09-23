@@ -11,12 +11,12 @@ class MockData:
                          style = "Chicken",
                          stars = 5,
                          country = "Spain",
-                         top_ten = "1"),
+                         top_ten = True),
             Ramen.Ramen(_id = 2,
                         brand = "Yatekomo",
                         variety = "b",
                         style = "Beef And Egg",
                         stars = 4,
                         country = "Spain",
-                        top_ten = "2")
+                        top_ten = False)
         ]

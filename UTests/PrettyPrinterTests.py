@@ -1,9 +1,13 @@
 import unittest
+from distutils.core import setup
+
 from Firebase import Ramen
+from Firebase import PrettyPrinter
+
 
 class PrettyPrinterTests(unittest.TestCase):
     def setUp(self):
-        self.data = [
+        self.testData = [
             Ramen.Ramen(_id=1,
                         brand="Yatekomo",
                         variety="a",
@@ -19,4 +23,11 @@ class PrettyPrinterTests(unittest.TestCase):
                         country="Spain",
                         top_ten="2")
         ]
+    def testPrinter(self):
+        self.setUp()
+        printer = PrettyPrinter.PrettyPrinter()
+
+        printer.print(self.testData)
+
+
 
