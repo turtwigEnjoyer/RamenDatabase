@@ -1,5 +1,5 @@
-import Ramen
-import QueryFilter
+from Firebase import Ramen
+from Firebase import QueryFilter
 class AbstractDb:
 
     def __init__(self):

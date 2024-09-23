@@ -7,7 +7,7 @@ from google.cloud.firestore_v1 import FieldFilter
 
 from Firebase.QueryFilter import QueryFilter
 from Firebase.AbstractDb import AbstractDb
-from Ramen import Ramen
+from Firebase import Ramen
 
 """ Class to create and control the database"""
 class DbInterface(AbstractDb):
