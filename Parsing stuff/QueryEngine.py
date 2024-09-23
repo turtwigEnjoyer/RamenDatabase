@@ -4,22 +4,33 @@ from QueryLexer import QueryLexer
 from QueryVisitor import QueryVisitor
 from QueryListener import QueryListener
 from Firebase.QueryFilter import QueryFilter
+from Firebase.DbInterface import DbInterface
 from query import MyVisitor
 
-def query_engine(query):
-    try:
-        stream = InputStream(query)
-        lexer = QueryLexer(stream)
-        stream = CommonTokenStream(lexer)
-        parser = QueryParser(stream)
-        tree = parser.prog()
-        visitor = MyVisitor()
-        output = visitor.visit(tree)
-        for x in output:
-            print(x)
-        return 0
-    except Exception as e:
-        return str(e)
+
+class Engine:
+    def __init__(self):
+        self.database = DbInterface()
+
+    def query_engine(self, query):
+        try:
+            stream = InputStream(query)
+            lexer = QueryLexer(stream)
+            stream = CommonTokenStream(lexer)
+            parser = QueryParser(stream)
+            tree = parser.prog()
+            visitor = MyVisitor()
+            output = visitor.visit(tree)
+            ramen_list = self.database.compound_query(output)
+            ## Need to print ramen_list
+
+            return 0
+        except Exception as e:
+            return str(e)
+
+
+
+
 
 
 def menu():
@@ -31,13 +42,14 @@ def menu():
     print("Type 'quit' to quit")
 
 if __name__ == '__main__':
+    engine = Engine()
     menu()
     query = str(input("Enter your query: "))
     while query != 'quit':
         if query == 'help':
             menu()
         else:
-            query_engine(query)
+            engine.query_engine(query)
         query = str(input("Enter your query: "))
     print("Goodbye!")
     quit
