@@ -47,12 +47,12 @@ def menu():
 if __name__ == '__main__':
     engine = Engine()
     menu()
-    query = str(input("Enter your query: "))
+    query = str(input("Enter your query: ") + "\n")
     while query != 'quit':
         if query == 'help':
             menu()
         else:
             engine.query_engine(query)
-        query = str(input("Enter your query: "))
+        query = str(input("Enter your query: ") + "\n")
     print("Goodbye!")
     quit
