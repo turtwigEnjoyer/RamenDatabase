@@ -3,6 +3,6 @@ class PrettyPrinter:
     def print(objectList: list ):
         for obj in objectList:
             for attribute, value in vars(obj).items():
-                print("   -" attribute +": "+ value +"\n")
+                print("   -" + attribute +": "+ value +"\n")
 
 
