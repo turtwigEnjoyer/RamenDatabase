@@ -28,7 +28,7 @@ class DbInterface(AbstractDb):
     def insert(self, ramen_object: Ramen) -> None:
         # convert to dict to easily pass to DB, then pass to DB using _id as the unique id
         ram_obj_dict = ramen_object.to_dict()
-        doc_ref = self.collection.document(str(ram_obj_dict["_id"]))
+        doc_ref = self.collection.document(str(ram_obj_dict["Id"]))
         doc_ref.set(ram_obj_dict) 
 
     def ClearDatabase(self):

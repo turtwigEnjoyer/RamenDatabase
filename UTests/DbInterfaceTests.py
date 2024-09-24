@@ -25,7 +25,7 @@ class DbInterfaceTests(unittest.TestCase):
     def testGreaterOrEqualSimpleQuery(self):
         #Test equality
         filter1 = QueryFilter(
-            field= "stars",
+            field= "Stars",
             comparer= ">=",
             value= 5
         )
@@ -36,9 +36,20 @@ class DbInterfaceTests(unittest.TestCase):
     def testIdentifierSimpleQuery(self):
         #Test equality
         filter1 = QueryFilter(
-            field= "id",
+            field= "Id",
             comparer= "==",
-            value= "2522"
+            value= 2522
+        )
+        result = self.db.Query([filter1])
+        #self.printer.print(result)
+        assert len(result) != 0
+
+    def testTop_TenSimpleQuery(self):
+        #Test equality
+        filter1 = QueryFilter(
+            field= "Top_Ten",
+            comparer= "==",
+            value= True
         )
         result = self.db.Query([filter1])
         #self.printer.print(result)
@@ -46,12 +57,12 @@ class DbInterfaceTests(unittest.TestCase):
 
     def testCompoundQueries(self):
         filter1 = QueryFilter(
-            field="stars",
+            field="Stars",
             comparer=">=",
             value=5
         )
         filter2 = QueryFilter(
-            field="style",
+            field="Style",
             comparer="==",
             value="Cup"
         )

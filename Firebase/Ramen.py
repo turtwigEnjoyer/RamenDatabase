@@ -7,27 +7,27 @@ class Ramen:
      Top ten could be the optional attribute, since it is an empty field on our dataset
     """
     #TODO add optional attribute
-    def __init__(self, _id: int, brand: str, variety: str, style: str, country: str, stars: int, top_ten: str):
-        self.Id = _id
-        self.Brand = brand
-        self.Variety = variety
-        self.Style = style
-        self.Country = country
-        self.Stars = stars
-        self.Top_Ten = top_ten
+    def __init__(self, Id: int, Brand: str, Variety: str, Style: str, Country: str, Stars: int, Top_Ten = None):
+        self.Id = Id
+        self.Brand = Brand
+        self.Variety = Variety
+        self.Style = Style
+        self.Country = Country
+        self.Stars = Stars
+        self.Top_Ten = Top_Ten
     
     def to_dict(self) -> dict:
-        return {"_id": self.Id, "brand": self.Brand, "variety": self.Variety, "style": self.Style, "country": self.Country, "stars": self.Stars, "top_ten": self.Top_Ten}
+        return {"Id": self.Id, "Brand": self.Brand, "Variety": self.Variety, "Style": self.Style, "Country": self.Country, "Stars": self.Stars, "Top_Ten": self.Top_Ten}
 
     @classmethod
     def from_dict(cls, ramen: dict):
-        return cls(_id = ramen["_id"],
-            brand = ramen["brand"],
-            variety = ramen["variety"],
-            style = ramen["style"],
-            country = ramen["country"],
-            stars = ramen["stars"],
-            top_ten = ramen["top_ten"])
+        return cls(Id = ramen["Id"],
+            Brand = ramen["Brand"],
+            Variety = ramen["Variety"],
+            Style = ramen["Style"],
+            Country = ramen["Country"],
+            Stars = ramen["Stars"],
+            Top_Ten = ramen["Top_Ten"])
 
 
 
