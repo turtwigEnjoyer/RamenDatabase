@@ -7,7 +7,7 @@ from google.cloud.firestore_v1 import FieldFilter
 
 from Firebase.QueryFilter import QueryFilter
 from Firebase.AbstractDb import AbstractDb
-from Firebase import Ramen
+from Firebase.Ramen import Ramen
 
 """ Class to create and control the database"""
 class DbInterface(AbstractDb):
@@ -29,35 +29,25 @@ class DbInterface(AbstractDb):
         doc_ref = self.collection.document(str(ram_obj_dict.pop("_id")))
         doc_ref.set(ram_obj_dict) 
 
-    # Executes queries to the DB using filtering to retrieve the desired data
-    def simple_query(self, query_filter: QueryFilter) -> list[Ramen]:
-
-        # Retrieve query with designated filtering
-        firebase_filter = FieldFilter(query_filter.field, query_filter.comparer, query_filter.value)
-
-        query_results=(self.collection.where(filter = firebase_filter).stream())
-
-        return self.query_results_to_list(query_results)
-
     """
     Runs a query with unlimited AND statements. Takes in lists of filters
     Careful! Will throw exception if we attempt to run a compound query that uses operators other than ==
     on fields other than stars.
     If we dont want an exception we need to create an index manually 
     """
-    def compound_query(self, query_filters: list[QueryFilter]) -> list[Ramen]:
+    def Query(self, query_filters: list[QueryFilter]) -> list[Ramen]:
 
-        filtered_collection = self.collection
+        filteredCollection = self.collection
         for query_filter in query_filters:
-            firebase_filter = FieldFilter(query_filter.field, query_filter.comparer, query_filter.value)
-            filtered_collection = filtered_collection.where(filter = firebase_filter)
+            firebaseFilter = FieldFilter(query_filter.field, query_filter.comparer, query_filter.value)
+            filteredCollection = filteredCollection.where(filter = firebaseFilter)
 
-        query_results = filtered_collection.stream()
-        return self.query_results_to_list(query_results)
+        queryResults = filteredCollection.stream()
+        return self.queryResultsToList(queryResults)
 
 
     @staticmethod
-    def query_results_to_list(query_results) -> list[Ramen]:
+    def queryResultsToList(query_results) -> list[Ramen]:
         ramen_list = list[Ramen]()
 
         for result in query_results:
