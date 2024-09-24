@@ -16,6 +16,6 @@ class DbInterfaceTests(unittest.TestCase):
             comparer= "==",
             value= "Japan"
         )
-        result = self.db.SimpleQuery(filter1)
+        result = self.db.Query([filter1])
         self.printer.print(result)
         assert len(result) != 0
