@@ -29,6 +29,10 @@ class DbInterface(AbstractDb):
         doc_ref = self.collection.document(str(ram_obj_dict.pop("_id")))
         doc_ref.set(ram_obj_dict) 
 
+    def ClearDatabase(self):
+        for document in self.collection.list_documents():
+            document.delete()
+
     """
     Runs a query with unlimited AND statements. Takes in lists of filters
     Careful! Will throw exception if we attempt to run a compound query that uses operators other than ==
