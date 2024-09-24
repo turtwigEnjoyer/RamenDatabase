@@ -7,17 +7,17 @@ class Ramen:
      Top ten could be the optional attribute, since it is an empty field on our dataset
     """
     #TODO add optional attribute
-    def __init__(self, Id: int, Brand: str, Variety: str, Style: str, Country: str, Stars: int, Top_Ten = None):
+    def __init__(self, Id: int, Brand: str, Variety: str, Style: str, Country: str, Stars: int, TopTen = None):
         self.Id = Id
         self.Brand = Brand
         self.Variety = Variety
         self.Style = Style
         self.Country = Country
         self.Stars = Stars
-        self.Top_Ten = Top_Ten
+        self.TopTen = TopTen
     
     def to_dict(self) -> dict:
-        return {"Id": self.Id, "Brand": self.Brand, "Variety": self.Variety, "Style": self.Style, "Country": self.Country, "Stars": self.Stars, "Top_Ten": self.Top_Ten}
+        return {"Id": self.Id, "Brand": self.Brand, "Variety": self.Variety, "Style": self.Style, "Country": self.Country, "Stars": self.Stars, "TopTen": self.TopTen}
 
     @classmethod
     def from_dict(cls, ramen: dict):
@@ -27,7 +27,7 @@ class Ramen:
             Style = ramen["Style"],
             Country = ramen["Country"],
             Stars = ramen["Stars"],
-            Top_Ten = ramen["Top_Ten"])
+            TopTen = ramen["TopTen"])
 
 
 
