@@ -22,12 +22,12 @@ class MockDbTests(unittest.TestCase):
     def testInsert(self):
         self.setUp()
 
-        self.MockDatabase.insert( Ramen.Ramen( _id = 1,
-                         brand = "Yatekomo",
-                         variety = "a",
-                         style = "Chicken",
-                         stars = 5,
-                         country = "Spain",
-                         top_ten = "1") )
+        self.MockDatabase.insert( Ramen.Ramen( Id = 1,
+                         Brand = "Yatekomo",
+                         Variety = "a",
+                         Style = "Chicken",
+                         Stars = 5,
+                         Country = "Spain",
+                         TopTen = "1") )
 
         assert len(self.MockDatabase.ramen_list) == 3

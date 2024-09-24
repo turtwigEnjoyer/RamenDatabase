@@ -47,7 +47,7 @@ class DbInterfaceTests(unittest.TestCase):
     def testTop_TenSimpleQuery(self):
         #Test equality
         filter1 = QueryFilter(
-            field= "Top_Ten",
+            field= "TopTen",
             comparer= "==",
             value= True
         )
