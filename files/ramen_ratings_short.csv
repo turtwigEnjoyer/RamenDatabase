@@ -127,11 +127,11 @@ Id,Brand,Variety,Style,Country,Stars,Top_Ten
 2455,KOKA,Creamy Soup With Crushed Noodles Sweet Corn Flavor,Cup,Singapore,5
 2454,KOKA,Silk Beef Pho Flavor Instant Rice Fettuccine,Bowl,Singapore,3.25
 2453,KOKA,Delight Spicy Sesame Flavor Instant Non-Fried Noodles,Pack,Singapore,4.5
-2452,KOKA,Signature Laksa Singapura Instant Noodles,Bowl,Singapore,5
+2452,KOKA,Signature Laksa Singapura Instant Noodles,Bowl,Singapore,5,True
 2451,KOKA,Delight Spicy Black Pepper Flavor Instant Non-Fried Noodles,Pack,Singapore,5
 2450,KOKA,Purple Wheat Noodles Chili & Lime Flavor,Pack,Singapore,4
 2449,KOKA,Delight Tomato Flavor Instant Non-Fried Noodles,Pack,Singapore,5
-2448,KOKA,Seafood Flavor Instant Noodles,Cup,Singapore,3.5
+2448,KOKA,Seafood Flavor Instant Noodles,Cup,Singapore,3.5,True
 2447,KOKA,Signature Stir-Fry Original Flavor Instant Noodles,Pack,Singapore,3
 2446,KOKA,Creamy Soup Witrh Crushed Noodles Curry Flavor,Cup,Singapore,5
 2445,KOKA,Delight Laksa Singapura Flavor Instant Non-Fried Noodles,Pack,Singapore,4.25
@@ -139,7 +139,7 @@ Id,Brand,Variety,Style,Country,Stars,Top_Ten
 2443,KOKA,Signature Chicken Flavor Instant Noodles,Cup,Singapore,3.75
 2442,Nissin,Cup Noodles Sopa Nissin Hot Sauce Con Camaron,Cup,Mexico,3.5
 2441,MyKuali,Penang Hokkien Prawn Flavor Noodle,Box,Japan,5
-2440,Master Kong,Roasted Pork Noodle,Pack,China,4.5
+2440,Master Kong,Roasted Pork Noodle,Pack,China,4.5,True
 2439,Uni-President,Man Han Feast Super Hot Pot Beef Flavor Instant Noodles,Bowl,Taiwan,5
 2438,World O' Noodle,Mi Goreng Original Flavour Fried Noodles,Pack,Indonesia,5
 2437,Nissin,Raoh Nojyuku Toro Tonkotsu Ramen,Bowl,Japan,4.5
