@@ -32,5 +32,5 @@ db = DbInterface(collection_name="ramen_ratings")
 filter1 = QueryFilter("stars", "<", 3)
 filter2 = QueryFilter("variety", "==", "Cup")
 #filters = [filter1, filter2]
-result = db.CompoundQuery([filter1, filter2])
+result = db.compound_query([filter1, filter2])
 print(len(result))

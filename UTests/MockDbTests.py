@@ -15,7 +15,7 @@ class MockDbTests(unittest.TestCase):
     def testSimpleQuery(self):
         self.setUp()
 
-        query_results = self.MockDatabase.SimpleQuery(field="Country", value="Spain")
+        query_results = self.MockDatabase.simple_query(field= "Country", value="Spain")
 
         assert len(query_results) == 2
 
