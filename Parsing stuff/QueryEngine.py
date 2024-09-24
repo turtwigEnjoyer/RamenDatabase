@@ -14,7 +14,7 @@ class Engine:
         self.database = DbInterface()
         self.prettyPrinter = PrettyPrinter()
 
-    def query_engine(self, query):
+    def QueryEngine(self, query):
         try:
             stream = InputStream(query)
             lexer = QueryLexer(stream)
@@ -23,9 +23,10 @@ class Engine:
             tree = parser.prog()
             visitor = MyVisitor()
             output = visitor.visit(tree)
-            ramen_list = self.database.Query(output)
-            ## Need to print ramen_list
-            self.prettyPrinter.print(ramen_list)
+            
+            ramenList = self.database.Query(output)
+            ## Need to print ramenList
+            self.prettyPrinter.print(ramenList)
 
             return 0
         except Exception as e:
@@ -47,7 +48,7 @@ if __name__ == '__main__':
         if query == 'help\n':
             menu()
         else:
-            engine.query_engine(query)
+            engine.QueryEngine(query)
         query = str(input("Enter your query: ") + "\n")
     print("Goodbye!")
     quit

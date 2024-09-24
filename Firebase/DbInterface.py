@@ -1,23 +1,17 @@
-from idlelib.query import Query
-
-
 import firebase_admin
 from firebase_admin import credentials
 from firebase_admin import firestore as firestore
 from google.cloud.firestore_v1 import FieldFilter
 
 from Firebase.QueryFilter import QueryFilter
-from Firebase.AbstractDb import AbstractDb
 from Firebase.Ramen import Ramen
 
-
 """ Class to create and control the database"""
-class DbInterface(AbstractDb):
+class DbInterface():
     """
         Creates a Database and then handles record insertion as well as query execution
     """
     def __init__(self):
-        super().__init__()
         # Use a service account.
         cred = credentials.Certificate('./cs3050-warmup-project-17f83-firebase-adminsdk-1gomb-858737ebab.json')
         firebase_admin.initialize_app(cred)
@@ -25,11 +19,11 @@ class DbInterface(AbstractDb):
         self.collection = self.db.collection("ramen_ratings")
     
     # Receives a Ramen object to insert to DB
-    def insert(self, ramen_object: Ramen) -> None:
+    def insert(self, ramenObject: Ramen) -> None:
         # convert to dict to easily pass to DB, then pass to DB using _id as the unique id
-        ram_obj_dict = ramen_object.to_dict()
-        doc_ref = self.collection.document(str(ram_obj_dict["Id"]))
-        doc_ref.set(ram_obj_dict) 
+        ramObjDict = ramenObject.ToDict()
+        docRef = self.collection.document(str(ramObjDict["Id"]))
+        docRef.set(ramObjDict) 
 
     def ClearDatabase(self):
         for document in self.collection.list_documents():
@@ -41,11 +35,11 @@ class DbInterface(AbstractDb):
     on fields other than stars.
     If we dont want an exception we need to create an index manually 
     """
-    def Query(self, query_filters: list[QueryFilter]) -> list[Ramen]:
+    def Query(self, queryFilters: list[QueryFilter]) -> list[Ramen]:
 
         filteredCollection = self.collection
-        for query_filter in query_filters:
-            firebaseFilter = FieldFilter(query_filter.field, query_filter.comparer, query_filter.value)
+        for queryFilter in queryFilters:
+            firebaseFilter = FieldFilter(queryFilter.field, queryFilter.comparer, queryFilter.value)
             filteredCollection = filteredCollection.where(filter = firebaseFilter)
 
         queryResults = filteredCollection.get()
@@ -53,12 +47,12 @@ class DbInterface(AbstractDb):
 
 
     @staticmethod
-    def queryResultsToList(query_results) -> list[Ramen]:
-        ramen_list = list[Ramen]()
+    def queryResultsToList(queryResults) -> list[Ramen]:
+        ramenList = list[Ramen]()
 
-        for result in query_results:
+        for result in queryResults:
 
-            ramen = Ramen.from_dict(result.to_dict())
-            ramen_list.append( ramen )
+            ramen = Ramen.FromDict(result.to_dict())
+            ramenList.append( ramen )
 
-        return ramen_list
+        return ramenList

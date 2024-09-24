@@ -16,11 +16,11 @@ class Ramen:
         self.Stars = Stars
         self.TopTen = TopTen
     
-    def to_dict(self) -> dict:
+    def ToDict(self) -> dict:
         return {"Id": self.Id, "Brand": self.Brand, "Variety": self.Variety, "Style": self.Style, "Country": self.Country, "Stars": self.Stars, "TopTen": self.TopTen}
 
     @classmethod
-    def from_dict(cls, ramen: dict):
+    def FromDict(cls, ramen: dict):
         return cls(Id = ramen["Id"],
             Brand = ramen["Brand"],
             Variety = ramen["Variety"],
