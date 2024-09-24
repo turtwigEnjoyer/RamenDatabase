@@ -58,13 +58,14 @@ class MyVisitor(QueryVisitor):
 # then be sent to the interface that filters and collects the data from the database finally that filtered data will
 # be printed onscreen for the user's pleasure
 def main(): #test
-    stream = InputStream('Country == "New Zealand"\n')
+    stream = InputStream('country == "New Zealand" AND Stars > 4\n')
     lexer = QueryLexer(stream)
     stream = CommonTokenStream(lexer)
     parser = QueryParser(stream)
     tree = parser.prog()
     visitor = MyVisitor()
     output = visitor.visit(tree)
+    print(output)
     for x in output:
         print(x)
     return 0
