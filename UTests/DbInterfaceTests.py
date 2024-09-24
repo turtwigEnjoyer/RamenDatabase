@@ -33,6 +33,17 @@ class DbInterfaceTests(unittest.TestCase):
         #self.printer.print(result)
         assert len(result) != 0
 
+    def testIdentifierSimpleQuery(self):
+        #Test equality
+        filter1 = QueryFilter(
+            field= "id",
+            comparer= "==",
+            value= "2522"
+        )
+        result = self.db.Query([filter1])
+        #self.printer.print(result)
+        assert len(result) != 0
+
     def testCompoundQueries(self):
         filter1 = QueryFilter(
             field="stars",
@@ -45,5 +56,5 @@ class DbInterfaceTests(unittest.TestCase):
             value="Cup"
         )
         result = self.db.Query([filter1, filter2])
-        self.printer.print(result)
+        #self.printer.print(result)
         assert len(result) != 0
