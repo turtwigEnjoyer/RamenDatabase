@@ -31,11 +31,6 @@ class Engine:
         except Exception as e:
             return str(e)
 
-
-
-
-
-
 def menu():
     print("Welcome: To get information about various types of Ramen, enter a query such as 'Country == Japan and "
           "Stars: > 5'")
@@ -48,8 +43,8 @@ if __name__ == '__main__':
     engine = Engine()
     menu()
     query = str(input("Enter your query: ") + "\n")
-    while query != 'quit':
-        if query == 'help':
+    while query != 'quit\n':
+        if query == 'help\n':
             menu()
         else:
             engine.query_engine(query)
