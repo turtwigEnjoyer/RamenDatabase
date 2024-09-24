@@ -7,7 +7,7 @@ from google.cloud.firestore_v1 import FieldFilter
 
 from Firebase.QueryFilter import QueryFilter
 from Firebase.AbstractDb import AbstractDb
-from Firebase import Ramen
+from Firebase.Ramen import Ramen
 
 """ Class to create and control the database"""
 class DbInterface(AbstractDb):
@@ -23,21 +23,21 @@ class DbInterface(AbstractDb):
         self.collection = self.db.collection("ramen_ratings")
     
     # Receives a Ramen object to insert to DB
-    def insert(self, ramen_object: Ramen) -> None:
+    def insert(self, ramenObject: Ramen) -> None:
         # convert to dict to easily pass to DB, then pass to DB using _id as the unique id
-        ram_obj_dict = ramen_object.to_dict()
-        doc_ref = self.collection.document(str(ram_obj_dict.pop("_id")))
-        doc_ref.set(ram_obj_dict) 
+        ramObjDict = ramenObject.to_dict()
+        documentReference = self.collection.document(str(ramObjDict.pop("_id")))
+        documentReference.set(ramObjDict)
 
     # Executes queries to the DB using filtering to retrieve the desired data
-    def simple_query(self, query_filter: QueryFilter) -> list[Ramen]:
+    def SimpleQuery(self, queryFilter: QueryFilter) -> list[Ramen]:
 
         # Retrieve query with designated filtering
-        firebase_filter = FieldFilter(query_filter.field, query_filter.comparer, query_filter.value)
+        firebaseFilter = FieldFilter(queryFilter.field, queryFilter.comparer, queryFilter.value)
 
-        query_results=(self.collection.where(filter = firebase_filter).stream())
+        queryResults=(self.collection.where(filter = firebaseFilter).stream())
 
-        return self.query_results_to_list(query_results)
+        return self.QueryResultsToList(queryResults)
 
     """
     Runs a query with unlimited AND statements. Takes in lists of filters
@@ -45,22 +45,22 @@ class DbInterface(AbstractDb):
     on fields other than stars.
     If we dont want an exception we need to create an index manually 
     """
-    def compound_query(self, query_filters: list[QueryFilter]) -> list[Ramen]:
+    def CompoundQuery(self, queryFilters: list[QueryFilter]) -> list[Ramen]:
 
-        filtered_collection = self.collection
-        for query_filter in query_filters:
-            firebase_filter = FieldFilter(query_filter.field, query_filter.comparer, query_filter.value)
-            filtered_collection = filtered_collection.where(filter = firebase_filter)
+        filteredCollection = self.collection
+        for query_filter in queryFilters:
+            firebaseFilter = FieldFilter(query_filter.field, query_filter.comparer, query_filter.value)
+            filteredCollection = filteredCollection.where(filter = firebaseFilter)
 
-        query_results = filtered_collection.stream()
-        return self.query_results_to_list(query_results)
+        queryResults = filteredCollection.stream()
+        return self.QueryResultsToList(queryResults)
 
 
     @staticmethod
-    def query_results_to_list(query_results) -> list[Ramen]:
+    def QueryResultsToList(queryResults) -> list[Ramen]:
         ramen_list = list[Ramen]()
 
-        for result in query_results:
-            ramen_list.append(Ramen.from_dict({**{'_id': int(result.id)},**result.to_dict()}))
+        for result in queryResults:
+            ramen_list.append(Ramen({**{'_id': int(result.id)},**result.to_dict()}))
 
         return ramen_list

@@ -20,14 +20,13 @@ class PrettyPrinterTests(unittest.TestCase):
                         variety="b",
                         style="Beef And Egg",
                         stars=4,
-                        country="Spain",
-                        top_ten="2")
+                        country="Spain")
         ]
     def testPrinter(self):
-        self.setUp()
         printer = PrettyPrinter.PrettyPrinter()
 
         printer.print(self.testData)
 
+        ##Assert it is pretty? Check this manually
 
 

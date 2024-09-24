@@ -18,7 +18,7 @@ class MockDatabase (AbstractDb):
     """
     Find all the objects matching a simple query
     """
-    def simple_query(self, field: str, value: str):
+    def SimpleQuery(self, field: str, value: str):
         matching_objects = []
         for ramen in self.ramen_list:
             field_value = getattr(ramen, field, None)

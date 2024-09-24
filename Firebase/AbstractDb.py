@@ -9,5 +9,5 @@ class AbstractDb:
     def insert(self, ramen_object: Ramen) -> None:
         pass
 
-    def simple_query(self, query_filter: QueryFilter) -> list[Ramen]:
+    def SimpleQuery(self, query_filter: QueryFilter) -> list[Ramen]:
         pass
