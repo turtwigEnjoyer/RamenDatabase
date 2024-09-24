@@ -23,7 +23,7 @@ class Engine:
             tree = parser.prog()
             visitor = MyVisitor()
             output = visitor.visit(tree)
-            ramen_list = self.database.compound_query(output)
+            ramen_list = self.database.Query(output)
             ## Need to print ramen_list
             self.prettyPrinter.print(ramen_list)
 

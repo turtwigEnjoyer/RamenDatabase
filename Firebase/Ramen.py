@@ -20,16 +20,14 @@ class Ramen:
         return {"_id": self.Id, "brand": self.Brand, "variety": self.Variety, "style": self.Style, "country": self.Country, "stars": self.Stars, "top_ten": self.Top_Ten}
 
     @classmethod
-    def from_dict(self, ramen: dict):
-        self.Id = ramen["_id"]
-        self.Brand = ramen["brand"]
-        self.Variety = ramen["variety"]
-        self.Style = ramen["style"]
-        self.Country = ramen["country"]
-        self.Stars = ramen["stars"]
-        self.Top_Ten = ramen["top_ten"]
-
-        return self
+    def from_dict(cls, ramen: dict):
+        return cls(_id = ramen["_id"],
+            brand = ramen["brand"],
+            variety = ramen["variety"],
+            style = ramen["style"],
+            country = ramen["country"],
+            stars = ramen["stars"],
+            top_ten = ramen["top_ten"])
 
 
 

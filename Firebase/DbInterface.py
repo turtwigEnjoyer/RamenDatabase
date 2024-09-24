@@ -42,7 +42,7 @@ class DbInterface(AbstractDb):
             firebaseFilter = FieldFilter(query_filter.field, query_filter.comparer, query_filter.value)
             filteredCollection = filteredCollection.where(filter = firebaseFilter)
 
-        queryResults = filteredCollection.stream()
+        queryResults = filteredCollection.get()
         return self.queryResultsToList(queryResults)
 
 
@@ -51,6 +51,8 @@ class DbInterface(AbstractDb):
         ramen_list = list[Ramen]()
 
         for result in query_results:
-            ramen_list.append(Ramen.from_dict({**{'_id': int(result.id)},**result.to_dict()}))
+
+            ramen = Ramen.from_dict( {**{'_id': int(result.id)},**result.to_dict()} )
+            ramen_list.append( ramen )
 
         return ramen_list

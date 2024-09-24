@@ -45,5 +45,5 @@ class DbInterfaceTests(unittest.TestCase):
             value="Cup"
         )
         result = self.db.Query([filter1, filter2])
-        #self.printer.print(result)
+        self.printer.print(result)
         assert len(result) != 0
