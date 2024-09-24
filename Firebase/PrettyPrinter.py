@@ -4,7 +4,7 @@ from pyparsing import empty
 class PrettyPrinter:
     @staticmethod
     def print(objectList: list ):
-        if objectList is empty:
+        if len(objectList) == 0:
             print('No results')
             return
         for obj in objectList:
