@@ -1,6 +1,12 @@
+from pyparsing import empty
+
+
 class PrettyPrinter:
     @staticmethod
     def print(objectList: list ):
+        if objectList is empty:
+            print('No results')
+            return
         for obj in objectList:
             print ("Ramen: ")
             for attribute, value in obj.__dict__.items():
