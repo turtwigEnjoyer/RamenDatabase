@@ -58,7 +58,7 @@ class DbInterface(AbstractDb):
 
         for result in query_results:
 
-            ramen = Ramen.from_dict( {**{'_id': int(result.id)},**result.to_dict()} )
+            ramen = Ramen.from_dict(result.to_dict())
             ramen_list.append( ramen )
 
         return ramen_list
