@@ -1,4 +1,4 @@
-_id,brand,variety,style,country,stars,top_ten
+Id,Brand,Variety,Style,Country,Stars,Top_Ten
 2580,New Touch,T's Restaurant Tantanmen ,Cup,Japan,3.75
 2579,Just Way,Noodles Spicy Hot Sesame Spicy Hot Sesame Guan-miao Noodles,Pack,Taiwan,1
 2578,Nissin,Cup Noodles Chicken Vegetable,Cup,USA,2.25
@@ -76,7 +76,7 @@ _id,brand,variety,style,country,stars,top_ten
 2506,KOKA,Delight Chicken Flavor Instant Non-Fried Noodles,Pack,Singapore,3.75
 2505,Acecook,Super Cup Torigawa Shoyu,Bowl,Japan,3.5
 2504,Nongshim,Shin Ramyun,Pack,South Korea,3
-2503,Sichuan Guangyou,Sweet Potato Instant Noodle Sout-Hot Flavor,Bowl,China,0
+2503,Sichuan Guangyou,Sweet Potato Instant Noodle Sout-Hot Flavor,Bowl,China,0,True
 2502,Indomie,Onion Chicken Flavor,Pack,Nigeria,1.5
 2501,Happy Cook,Toona Paste Noodle,Pack,Taiwan,4
 2500,The Ramen Rater Select,Supreme Creamy Tom Yum Noodle,Box,Malaysia,5

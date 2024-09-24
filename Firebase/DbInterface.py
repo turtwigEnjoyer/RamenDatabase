@@ -1,5 +1,6 @@
 from idlelib.query import Query
 
+
 import firebase_admin
 from firebase_admin import credentials
 from firebase_admin import firestore as firestore
@@ -8,6 +9,7 @@ from google.cloud.firestore_v1 import FieldFilter
 from Firebase.QueryFilter import QueryFilter
 from Firebase.AbstractDb import AbstractDb
 from Firebase.Ramen import Ramen
+
 
 """ Class to create and control the database"""
 class DbInterface(AbstractDb):
@@ -26,7 +28,7 @@ class DbInterface(AbstractDb):
     def insert(self, ramen_object: Ramen) -> None:
         # convert to dict to easily pass to DB, then pass to DB using _id as the unique id
         ram_obj_dict = ramen_object.to_dict()
-        doc_ref = self.collection.document(str(ram_obj_dict.pop("_id")))
+        doc_ref = self.collection.document(str(ram_obj_dict["_id"]))
         doc_ref.set(ram_obj_dict) 
 
     def ClearDatabase(self):
