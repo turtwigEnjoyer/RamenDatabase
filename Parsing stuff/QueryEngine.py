@@ -8,7 +8,6 @@ from Firebase.DbInterface import DbInterface
 from Firebase.PrettyPrinter import PrettyPrinter
 from query import MyVisitor
 
-
 class Engine:
     def __init__(self):
         self.database = DbInterface()
@@ -23,11 +22,8 @@ class Engine:
             tree = parser.prog()
             visitor = MyVisitor()
             output = visitor.visit(tree)
-            
             ramenList = self.database.Query(output)
-            ## Need to print ramenList
             self.prettyPrinter.print(ramenList)
-
             return 0
         except Exception as e:
             return str(e)

@@ -1,12 +1,10 @@
 import ast
-
 from antlr4 import *
 from QueryParser import QueryParser
 from QueryLexer import QueryLexer
 from QueryVisitor import QueryVisitor
 from QueryListener import QueryListener
 from Firebase.QueryFilter import QueryFilter
-
 
 # overwrites generated visitor from the antlr grammar to do the things we actually want it to do
 # still probably needs to be updated to fit our current use case
@@ -36,7 +34,7 @@ class MyVisitor(QueryVisitor):
         return self.storage
 
     def visitCompare(self, ctx):
-        left = ctx.ID().getText()
+        left = ctx.ID().getText().capitalize()
         right = self.visit(ctx.val())
         op = ctx.op.text
         container = QueryFilter(left, op, right)
@@ -50,43 +48,9 @@ class MyVisitor(QueryVisitor):
     def visitInt(self, ctx):
         return int(ctx.INT().getText())
 
-
 # Test main method that shows the use of visitor this shows all the setup for utilizing an antlr visitor class
 # Ideally nobody should need to download antlr or anything because all the classes required are pre-generated in the
 # repo. We will have to change this file to be just a class definition file for the visitor and then implement the
 # below code in the query engine. This code will then be hooked up to user input to parse each incoming query. It will
 # then be sent to the interface that filters and collects the data from the database finally that filtered data will
 # be printed onscreen for the user's pleasure
-# def main(): #test
-#     stream = InputStream('country == "New Zealand" AND Stars > 4\n')
-#     lexer = QueryLexer(stream)
-#     stream = CommonTokenStream(lexer)
-#     parser = QueryParser(stream)
-#     tree = parser.prog()
-#     visitor = MyVisitor()
-#     output = visitor.visit(tree)
-#     print(output)
-#     for x in output:
-#         print(x)
-#     return 0
-#
-#
-# main()
-
-
-def testParser(inputQuery):
-    stream = InputStream(inputQuery)
-    lexer = QueryLexer(stream)
-    token_stream = CommonTokenStream(lexer)
-    parser = QueryParser(token_stream)
-    tree = parser.prog()
-    visitor = MyVisitor()
-    visitor.visit(tree)
-    return visitor.storage
-
-testQuery1 = "Country == 'South Korea' AND Stars > 4"
-testQuery2 = "Style == pack AND Brand == Wang"
-testQuery3 = "Variety == soup"
-testQuery4 = "Brand == 'Samyang Foods' AND Stars == 5"
-
-print(testParser(testQuery1))
