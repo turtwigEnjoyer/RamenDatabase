@@ -19,6 +19,7 @@ filter: BRAND          #brand
       | STYLE          #style
       | VARIETY         #variety
       | STARS           #stars
+      | TOPTEN          #topTen
       ;
 
 val: ID        #id
@@ -33,6 +34,7 @@ COUNTRY: 'Country';
 STYLE: 'Style';
 VARIETY: 'Variety';
 STARS: 'Stars';
+TOPTEN: 'TopTen';
 
 EQ: '==';
 LT: '<';

@@ -59,6 +59,11 @@ class QueryVisitor(ParseTreeVisitor):
         return self.visitChildren(ctx)
 
 
+    # Visit a parse tree produced by QueryParser#topTen.
+    def visitTopTen(self, ctx:QueryParser.TopTenContext):
+        return self.visitChildren(ctx)
+
+
     # Visit a parse tree produced by QueryParser#id.
     def visitId(self, ctx:QueryParser.IdContext):
         return self.visitChildren(ctx)

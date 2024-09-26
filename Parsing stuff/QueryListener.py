@@ -98,6 +98,15 @@ class QueryListener(ParseTreeListener):
         pass
 
 
+    # Enter a parse tree produced by QueryParser#topTen.
+    def enterTopTen(self, ctx:QueryParser.TopTenContext):
+        pass
+
+    # Exit a parse tree produced by QueryParser#topTen.
+    def exitTopTen(self, ctx:QueryParser.TopTenContext):
+        pass
+
+
     # Enter a parse tree produced by QueryParser#id.
     def enterId(self, ctx:QueryParser.IdContext):
         pass

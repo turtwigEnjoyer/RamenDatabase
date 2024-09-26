@@ -76,6 +76,10 @@ class MyVisitor(QueryVisitor):
     def visitStars(self, ctx):
         return ctx.STARS().getText()
 
+    #visits TopTen filter
+    def visitTopTen(self, ctx):
+        return ctx.TOPTEN().getText()
+
     # the visitID method visits the value held in the ID spot so it grabs the filter string as well as the value
     # if its a string
     def visitId(self, ctx):
@@ -106,20 +110,20 @@ class MyVisitor(QueryVisitor):
 # below code in the query engine. This code will then be hooked up to user input to parse each incoming query. It will
 # then be sent to the interface that filters and collects the data from the database finally that filtered data will
 # be printed onscreen for the user's pleasure
-# def main(): #test
-#     stream = InputStream('country == "New Zealand" AND Stars > 4\n')
-#     lexer = QueryLexer(stream)
-#     stream = CommonTokenStream(lexer)
-#     parser = QueryParser(stream)
-#     tree = parser.prog()
-#     visitor = MyVisitor()
-#     output = visitor.visit(tree)
-#     print(output)
-#     for x in output:
-#         print(x)
-#     return 0
-#
-#
+def main(): #test
+    stream = InputStream('country == "New Zealand" AND Stars > 4\n')
+    lexer = QueryLexer(stream)
+    stream = CommonTokenStream(lexer)
+    parser = QueryParser(stream)
+    tree = parser.prog()
+    visitor = MyVisitor()
+    output = visitor.visit(tree)
+    print(output)
+    for x in output:
+        print(x)
+    return 0
+
+
 # main()
 
 

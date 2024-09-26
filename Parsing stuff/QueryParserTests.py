@@ -81,6 +81,6 @@ class QueryParserTests:
 if __name__ == '__main__':
     test = QueryParserTests()
     test.testQuery1()
-    # test.testQuery2()
-    # test.testQuery3()
-    # test.testQuery4()
+    test.testQuery2()
+    test.testQuery3()
+    test.testQuery4()
