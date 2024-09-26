@@ -66,7 +66,7 @@ def menu():
           "Filter > Value'")
     print('All queries that contain a word with spaces in it like: Country == "South Korea" must be typed with quotes'
           ' as shown.')
-    print("Available filters are: Brand, Country, Style, Variety, Stars")
+    print("Available filters are: Brand, Country, Style, Variety, Stars, TopTen")
     print("Use 'AND' to combine up to two filters")
     print("Type 'help' for full list of available commands")
     print("Type 'quit' to quit")
