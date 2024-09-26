@@ -43,11 +43,31 @@ class MyVisitor(QueryVisitor):
     #the visitCompare method visits goes in one more layer of the ANTLR and breaks up the operation and
     # then each side of the query: filter and value
     def visitCompare(self, ctx):
-        left = ctx.ID().getText().capitalize()
+        left = self.visit(ctx.filter_())
         right = self.visit(ctx.val())
         op = ctx.op.text
         container = QueryFilter(left, op, right)
         return container
+
+    #visits Brand filter
+    def visitBrand(self, ctx):
+        return ctx.BRAND().getText()
+
+    #visits Country filter
+    def visitCountry(self, ctx):
+        return ctx.COUNTRY().getText()
+
+    #visits Style filter
+    def visitStyle(self, ctx):
+        return ctx.STYLE().getText()
+
+    #visits Variety filter
+    def visitVariety(self, ctx):
+        return ctx.VARIETY().getText()
+
+    #visits Stars filter
+    def visitStars(self, ctx):
+        return ctx.STARS().getText()
 
     # the visitID method visits the value held in the ID spot so it grabs the filter string as well as the value
     # if its a string
@@ -56,6 +76,8 @@ class MyVisitor(QueryVisitor):
         identifier = identifier.strip('"')
         #breaking up multi-worded answer
         words = identifier.split(' ')
+        if len(words) == 1:
+            return identifier.capitalize()
         identifier = ""
         #and putting it back together capitalized correctly
         for word in words:
@@ -63,6 +85,7 @@ class MyVisitor(QueryVisitor):
             identifier += word
             if word != words[-1]:
                 identifier += " "
+        print(identifier)
         return identifier
 
     #Finally visitInt grabs the value if it is an int and sends it up through the visitor chain

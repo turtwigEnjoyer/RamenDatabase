@@ -10,16 +10,20 @@ else:
 
 def serializedATN():
     return [
-        4,1,14,33,2,0,7,0,2,1,7,1,2,2,7,2,2,3,7,3,1,0,4,0,10,8,0,11,0,12,
-        0,11,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,3,1,23,8,1,1,2,1,2,1,2,
-        1,2,1,3,1,3,3,3,31,8,3,1,3,0,0,4,0,2,4,6,0,2,1,0,1,2,1,0,3,8,32,
-        0,9,1,0,0,0,2,22,1,0,0,0,4,24,1,0,0,0,6,30,1,0,0,0,8,10,3,2,1,0,
-        9,8,1,0,0,0,10,11,1,0,0,0,11,9,1,0,0,0,11,12,1,0,0,0,12,1,1,0,0,
-        0,13,14,3,4,2,0,14,15,7,0,0,0,15,16,3,4,2,0,16,17,5,11,0,0,17,23,
-        1,0,0,0,18,19,3,4,2,0,19,20,5,11,0,0,20,23,1,0,0,0,21,23,5,11,0,
-        0,22,13,1,0,0,0,22,18,1,0,0,0,22,21,1,0,0,0,23,3,1,0,0,0,24,25,5,
-        9,0,0,25,26,7,1,0,0,26,27,3,6,3,0,27,5,1,0,0,0,28,31,5,9,0,0,29,
-        31,5,10,0,0,30,28,1,0,0,0,30,29,1,0,0,0,31,7,1,0,0,0,3,11,22,30
+        4,1,19,42,2,0,7,0,2,1,7,1,2,2,7,2,2,3,7,3,2,4,7,4,1,0,4,0,12,8,0,
+        11,0,12,0,13,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,3,1,25,8,1,1,2,
+        1,2,1,2,1,2,1,3,1,3,1,3,1,3,1,3,3,3,36,8,3,1,4,1,4,3,4,40,8,4,1,
+        4,0,0,5,0,2,4,6,8,0,2,1,0,1,2,1,0,8,13,44,0,11,1,0,0,0,2,24,1,0,
+        0,0,4,26,1,0,0,0,6,35,1,0,0,0,8,39,1,0,0,0,10,12,3,2,1,0,11,10,1,
+        0,0,0,12,13,1,0,0,0,13,11,1,0,0,0,13,14,1,0,0,0,14,1,1,0,0,0,15,
+        16,3,4,2,0,16,17,7,0,0,0,17,18,3,4,2,0,18,19,5,16,0,0,19,25,1,0,
+        0,0,20,21,3,4,2,0,21,22,5,16,0,0,22,25,1,0,0,0,23,25,5,16,0,0,24,
+        15,1,0,0,0,24,20,1,0,0,0,24,23,1,0,0,0,25,3,1,0,0,0,26,27,3,6,3,
+        0,27,28,7,1,0,0,28,29,3,8,4,0,29,5,1,0,0,0,30,36,5,3,0,0,31,36,5,
+        4,0,0,32,36,5,5,0,0,33,36,5,6,0,0,34,36,5,7,0,0,35,30,1,0,0,0,35,
+        31,1,0,0,0,35,32,1,0,0,0,35,33,1,0,0,0,35,34,1,0,0,0,36,7,1,0,0,
+        0,37,40,5,14,0,0,38,40,5,15,0,0,39,37,1,0,0,0,39,38,1,0,0,0,40,9,
+        1,0,0,0,4,13,24,35,39
     ]
 
 class QueryParser ( Parser ):
@@ -32,35 +36,42 @@ class QueryParser ( Parser ):
 
     sharedContextCache = PredictionContextCache()
 
-    literalNames = [ "<INVALID>", "'AND'", "'OR'", "'=='", "'<'", "'>'", 
+    literalNames = [ "<INVALID>", "'AND'", "'OR'", "'Brand'", "'Country'", 
+                     "'Style'", "'Variety'", "'Stars'", "'=='", "'<'", "'>'", 
                      "'<='", "'>='", "'!='" ]
 
-    symbolicNames = [ "<INVALID>", "AND", "OR", "EQ", "LT", "GT", "LTEQ", 
-                      "GTEQ", "NEQ", "ID", "INT", "NEWLINE", "WS", "ANY", 
-                      "QUOTED_ID" ]
+    symbolicNames = [ "<INVALID>", "AND", "OR", "BRAND", "COUNTRY", "STYLE", 
+                      "VARIETY", "STARS", "EQ", "LT", "GT", "LTEQ", "GTEQ", 
+                      "NEQ", "ID", "INT", "NEWLINE", "WS", "ANY", "QUOTED_ID" ]
 
     RULE_prog = 0
     RULE_command = 1
     RULE_expr = 2
-    RULE_val = 3
+    RULE_filter = 3
+    RULE_val = 4
 
-    ruleNames =  [ "prog", "command", "expr", "val" ]
+    ruleNames =  [ "prog", "command", "expr", "filter", "val" ]
 
     EOF = Token.EOF
     AND=1
     OR=2
-    EQ=3
-    LT=4
-    GT=5
-    LTEQ=6
-    GTEQ=7
-    NEQ=8
-    ID=9
-    INT=10
-    NEWLINE=11
-    WS=12
-    ANY=13
-    QUOTED_ID=14
+    BRAND=3
+    COUNTRY=4
+    STYLE=5
+    VARIETY=6
+    STARS=7
+    EQ=8
+    LT=9
+    GT=10
+    LTEQ=11
+    GTEQ=12
+    NEQ=13
+    ID=14
+    INT=15
+    NEWLINE=16
+    WS=17
+    ANY=18
+    QUOTED_ID=19
 
     def __init__(self, input:TokenStream, output:TextIO = sys.stdout):
         super().__init__(input, output)
@@ -112,16 +123,16 @@ class QueryParser ( Parser ):
         self._la = 0 # Token type
         try:
             self.enterOuterAlt(localctx, 1)
-            self.state = 9 
+            self.state = 11 
             self._errHandler.sync(self)
             _la = self._input.LA(1)
             while True:
-                self.state = 8
+                self.state = 10
                 self.command()
-                self.state = 11 
+                self.state = 13 
                 self._errHandler.sync(self)
                 _la = self._input.LA(1)
-                if not (_la==9 or _la==11):
+                if not ((((_la) & ~0x3f) == 0 and ((1 << _la) & 65784) != 0)):
                     break
 
         except RecognitionException as re:
@@ -243,15 +254,15 @@ class QueryParser ( Parser ):
         self.enterRule(localctx, 2, self.RULE_command)
         self._la = 0 # Token type
         try:
-            self.state = 22
+            self.state = 24
             self._errHandler.sync(self)
             la_ = self._interp.adaptivePredict(self._input,1,self._ctx)
             if la_ == 1:
                 localctx = QueryParser.PrintJoinContext(self, localctx)
                 self.enterOuterAlt(localctx, 1)
-                self.state = 13
+                self.state = 15
                 self.expr()
-                self.state = 14
+                self.state = 16
                 localctx.op = self._input.LT(1)
                 _la = self._input.LA(1)
                 if not(_la==1 or _la==2):
@@ -259,25 +270,25 @@ class QueryParser ( Parser ):
                 else:
                     self._errHandler.reportMatch(self)
                     self.consume()
-                self.state = 15
+                self.state = 17
                 self.expr()
-                self.state = 16
+                self.state = 18
                 self.match(QueryParser.NEWLINE)
                 pass
 
             elif la_ == 2:
                 localctx = QueryParser.PrintExprContext(self, localctx)
                 self.enterOuterAlt(localctx, 2)
-                self.state = 18
+                self.state = 20
                 self.expr()
-                self.state = 19
+                self.state = 21
                 self.match(QueryParser.NEWLINE)
                 pass
 
             elif la_ == 3:
                 localctx = QueryParser.BlankContext(self, localctx)
                 self.enterOuterAlt(localctx, 3)
-                self.state = 21
+                self.state = 23
                 self.match(QueryParser.NEWLINE)
                 pass
 
@@ -315,8 +326,9 @@ class QueryParser ( Parser ):
             self.op = None # Token
             self.copyFrom(ctx)
 
-        def ID(self):
-            return self.getToken(QueryParser.ID, 0)
+        def filter_(self):
+            return self.getTypedRuleContext(QueryParser.FilterContext,0)
+
         def val(self):
             return self.getTypedRuleContext(QueryParser.ValContext,0)
 
@@ -357,18 +369,206 @@ class QueryParser ( Parser ):
         try:
             localctx = QueryParser.CompareContext(self, localctx)
             self.enterOuterAlt(localctx, 1)
-            self.state = 24
-            self.match(QueryParser.ID)
-            self.state = 25
+            self.state = 26
+            self.filter_()
+            self.state = 27
             localctx.op = self._input.LT(1)
             _la = self._input.LA(1)
-            if not((((_la) & ~0x3f) == 0 and ((1 << _la) & 504) != 0)):
+            if not((((_la) & ~0x3f) == 0 and ((1 << _la) & 16128) != 0)):
                 localctx.op = self._errHandler.recoverInline(self)
             else:
                 self._errHandler.reportMatch(self)
                 self.consume()
-            self.state = 26
+            self.state = 28
             self.val()
+        except RecognitionException as re:
+            localctx.exception = re
+            self._errHandler.reportError(self, re)
+            self._errHandler.recover(self, re)
+        finally:
+            self.exitRule()
+        return localctx
+
+
+    class FilterContext(ParserRuleContext):
+        __slots__ = 'parser'
+
+        def __init__(self, parser, parent:ParserRuleContext=None, invokingState:int=-1):
+            super().__init__(parent, invokingState)
+            self.parser = parser
+
+
+        def getRuleIndex(self):
+            return QueryParser.RULE_filter
+
+     
+        def copyFrom(self, ctx:ParserRuleContext):
+            super().copyFrom(ctx)
+
+
+
+    class CountryContext(FilterContext):
+
+        def __init__(self, parser, ctx:ParserRuleContext): # actually a QueryParser.FilterContext
+            super().__init__(parser)
+            self.copyFrom(ctx)
+
+        def COUNTRY(self):
+            return self.getToken(QueryParser.COUNTRY, 0)
+
+        def enterRule(self, listener:ParseTreeListener):
+            if hasattr( listener, "enterCountry" ):
+                listener.enterCountry(self)
+
+        def exitRule(self, listener:ParseTreeListener):
+            if hasattr( listener, "exitCountry" ):
+                listener.exitCountry(self)
+
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitCountry" ):
+                return visitor.visitCountry(self)
+            else:
+                return visitor.visitChildren(self)
+
+
+    class VarietyContext(FilterContext):
+
+        def __init__(self, parser, ctx:ParserRuleContext): # actually a QueryParser.FilterContext
+            super().__init__(parser)
+            self.copyFrom(ctx)
+
+        def VARIETY(self):
+            return self.getToken(QueryParser.VARIETY, 0)
+
+        def enterRule(self, listener:ParseTreeListener):
+            if hasattr( listener, "enterVariety" ):
+                listener.enterVariety(self)
+
+        def exitRule(self, listener:ParseTreeListener):
+            if hasattr( listener, "exitVariety" ):
+                listener.exitVariety(self)
+
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitVariety" ):
+                return visitor.visitVariety(self)
+            else:
+                return visitor.visitChildren(self)
+
+
+    class StyleContext(FilterContext):
+
+        def __init__(self, parser, ctx:ParserRuleContext): # actually a QueryParser.FilterContext
+            super().__init__(parser)
+            self.copyFrom(ctx)
+
+        def STYLE(self):
+            return self.getToken(QueryParser.STYLE, 0)
+
+        def enterRule(self, listener:ParseTreeListener):
+            if hasattr( listener, "enterStyle" ):
+                listener.enterStyle(self)
+
+        def exitRule(self, listener:ParseTreeListener):
+            if hasattr( listener, "exitStyle" ):
+                listener.exitStyle(self)
+
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitStyle" ):
+                return visitor.visitStyle(self)
+            else:
+                return visitor.visitChildren(self)
+
+
+    class StarsContext(FilterContext):
+
+        def __init__(self, parser, ctx:ParserRuleContext): # actually a QueryParser.FilterContext
+            super().__init__(parser)
+            self.copyFrom(ctx)
+
+        def STARS(self):
+            return self.getToken(QueryParser.STARS, 0)
+
+        def enterRule(self, listener:ParseTreeListener):
+            if hasattr( listener, "enterStars" ):
+                listener.enterStars(self)
+
+        def exitRule(self, listener:ParseTreeListener):
+            if hasattr( listener, "exitStars" ):
+                listener.exitStars(self)
+
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitStars" ):
+                return visitor.visitStars(self)
+            else:
+                return visitor.visitChildren(self)
+
+
+    class BrandContext(FilterContext):
+
+        def __init__(self, parser, ctx:ParserRuleContext): # actually a QueryParser.FilterContext
+            super().__init__(parser)
+            self.copyFrom(ctx)
+
+        def BRAND(self):
+            return self.getToken(QueryParser.BRAND, 0)
+
+        def enterRule(self, listener:ParseTreeListener):
+            if hasattr( listener, "enterBrand" ):
+                listener.enterBrand(self)
+
+        def exitRule(self, listener:ParseTreeListener):
+            if hasattr( listener, "exitBrand" ):
+                listener.exitBrand(self)
+
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitBrand" ):
+                return visitor.visitBrand(self)
+            else:
+                return visitor.visitChildren(self)
+
+
+
+    def filter_(self):
+
+        localctx = QueryParser.FilterContext(self, self._ctx, self.state)
+        self.enterRule(localctx, 6, self.RULE_filter)
+        try:
+            self.state = 35
+            self._errHandler.sync(self)
+            token = self._input.LA(1)
+            if token in [3]:
+                localctx = QueryParser.BrandContext(self, localctx)
+                self.enterOuterAlt(localctx, 1)
+                self.state = 30
+                self.match(QueryParser.BRAND)
+                pass
+            elif token in [4]:
+                localctx = QueryParser.CountryContext(self, localctx)
+                self.enterOuterAlt(localctx, 2)
+                self.state = 31
+                self.match(QueryParser.COUNTRY)
+                pass
+            elif token in [5]:
+                localctx = QueryParser.StyleContext(self, localctx)
+                self.enterOuterAlt(localctx, 3)
+                self.state = 32
+                self.match(QueryParser.STYLE)
+                pass
+            elif token in [6]:
+                localctx = QueryParser.VarietyContext(self, localctx)
+                self.enterOuterAlt(localctx, 4)
+                self.state = 33
+                self.match(QueryParser.VARIETY)
+                pass
+            elif token in [7]:
+                localctx = QueryParser.StarsContext(self, localctx)
+                self.enterOuterAlt(localctx, 5)
+                self.state = 34
+                self.match(QueryParser.STARS)
+                pass
+            else:
+                raise NoViableAltException(self)
+
         except RecognitionException as re:
             localctx.exception = re
             self._errHandler.reportError(self, re)
@@ -447,21 +647,21 @@ class QueryParser ( Parser ):
     def val(self):
 
         localctx = QueryParser.ValContext(self, self._ctx, self.state)
-        self.enterRule(localctx, 6, self.RULE_val)
+        self.enterRule(localctx, 8, self.RULE_val)
         try:
-            self.state = 30
+            self.state = 39
             self._errHandler.sync(self)
             token = self._input.LA(1)
-            if token in [9]:
+            if token in [14]:
                 localctx = QueryParser.IdContext(self, localctx)
                 self.enterOuterAlt(localctx, 1)
-                self.state = 28
+                self.state = 37
                 self.match(QueryParser.ID)
                 pass
-            elif token in [10]:
+            elif token in [15]:
                 localctx = QueryParser.IntContext(self, localctx)
                 self.enterOuterAlt(localctx, 2)
-                self.state = 29
+                self.state = 38
                 self.match(QueryParser.INT)
                 pass
             else:
