@@ -65,7 +65,7 @@ class QueryParserTests:
         return 0
 
     def testQuery4(self):
-        testQuery4 = "Brand == 'Samyang Foods'\n"
+        testQuery4 = "Brand == \"Samyang Foods\"\n"
         print(f"Testing parser Case 4: {testQuery4}")
         tree = self.parseQuery(testQuery4)
         visitor = query.MyVisitor()
