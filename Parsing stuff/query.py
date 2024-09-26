@@ -74,7 +74,7 @@ class MyVisitor(QueryVisitor):
 
     #visits Stars filter
     def visitStars(self, ctx):
-        return ctx.STARS().getText().capitalize()
+        return ctx.STARS().getText()
 
     # the visitID method visits the value held in the ID spot so it grabs the filter string as well as the value
     # if its a string

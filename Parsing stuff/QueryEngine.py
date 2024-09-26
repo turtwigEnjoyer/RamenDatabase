@@ -52,18 +52,12 @@ class Engine:
             visitor = MyVisitor()
             output = visitor.visit(tree)
 
-            for queryFilter in output:
-                field = queryFilter.field
-                value = queryFilter.value
-                if field.Capitalize() == "Stars":
-                    if not (0 <= value <= 5):
-                        raise ValueError("Value must be between 0 and 5")
-
             ramenList = self.database.Query(output)
             self.prettyPrinter.print(ramenList)
             return 0
+
         except Exception as e:
-            print(f"Error {e}")
+            # print(f"Error {e}")
             return str(e)
 
 
