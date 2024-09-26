@@ -7,6 +7,7 @@ from Firebase.QueryFilter import QueryFilter
 from Firebase.DbInterface import DbInterface
 from Firebase.PrettyPrinter import PrettyPrinter
 from query import MyVisitor
+from antlr4.error.ErrorListener import ErrorListener
 
 
 #TODO: error handling
@@ -16,6 +17,14 @@ from query import MyVisitor
 #fixed:
 # quotations work with spaced value entries
 # no spaced filters so no adjustments on that one
+
+class ErrorListener(ErrorListener):
+    def __init__(self):
+        super(ErrorListener, self).__init__()
+
+    def syntaxError(self, recognizer, offendingSymbol, line, column, msg, e):
+        print("Syntax error at line " + str(line) + ":" + str(column))
+        print("Please enter a valid query.")
 
 #Engine class contains the commands that need to be run to start up the parser and then connect it to the database
 # This is where the two parts of the project come together and work together to query the data from the database
@@ -33,15 +42,28 @@ class Engine:
         try:
             stream = InputStream(query)
             lexer = QueryLexer(stream)
-            stream = CommonTokenStream(lexer)
-            parser = QueryParser(stream)
+            tokenStream = CommonTokenStream(lexer)
+            parser = QueryParser(tokenStream)
+
+            parser.removeErrorListeners()
+            parser.addErrorListener(ErrorListener())
+
             tree = parser.prog()
             visitor = MyVisitor()
             output = visitor.visit(tree)
+
+            for queryFilter in output:
+                field = queryFilter.field
+                value = queryFilter.value
+                if field == "Stars":
+                    if not (0 <= value <= 5):
+                        raise ValueError("Value must be between 0 and 5")
+
             ramenList = self.database.Query(output)
             self.prettyPrinter.print(ramenList)
             return 0
         except Exception as e:
+            print(f"Error {e}")
             return str(e)
 
 

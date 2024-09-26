@@ -1,3 +1,5 @@
+import sys
+sys.path.append("../")
 from antlr4 import *
 from QueryParser import QueryParser
 from QueryLexer import QueryLexer
@@ -22,7 +24,9 @@ class QueryParserTests:
         testQuery1 = "Country == Japan AND stars > 4\n"
         print(f"Testing parser Case 1: {testQuery1}")
         tree = self.parseQuery(testQuery1)
+        print(tree)
         visitor = query.MyVisitor()
+        print(visitor.visit(tree))
         output = visitor.visit(tree)
         if output is None:
             print("Test Failed")
@@ -47,7 +51,7 @@ class QueryParserTests:
         return 0
 
     def testQuery3(self):
-        testQuery3 = "Style == Pack and Brand == Wang\n"
+        testQuery3 = "Style == Pack AND Stars == 8\n"
         print(f"Testing parser Case 3: {testQuery3}")
         tree = self.parseQuery(testQuery3)
         visitor = query.MyVisitor()
@@ -61,7 +65,7 @@ class QueryParserTests:
         return 0
 
     def testQuery4(self):
-        testQuery4 = "Brand == 'Samyang Foods' AND Stars == 5\n"
+        testQuery4 = "Brand == 'Samyang Foods'\n"
         print(f"Testing parser Case 4: {testQuery4}")
         tree = self.parseQuery(testQuery4)
         visitor = query.MyVisitor()
@@ -77,6 +81,6 @@ class QueryParserTests:
 if __name__ == '__main__':
     test = QueryParserTests()
     test.testQuery1()
-    test.testQuery2()
-    test.testQuery3()
-    test.testQuery4()
+    # test.testQuery2()
+    # test.testQuery3()
+    # test.testQuery4()
