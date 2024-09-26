@@ -96,7 +96,6 @@ class MyVisitor(QueryVisitor):
             identifier += word
             if word != words[-1]:
                 identifier += " "
-        print(identifier)
         return identifier
 
     #Finally visitInt grabs the value if it is an int and sends it up through the visitor chain
@@ -142,4 +141,4 @@ testQuery2 = "Style == pack AND Brand == Wang"
 testQuery3 = "Variety == soup"
 testQuery4 = "Brand == 'Samyang Foods' AND Stars == 5"
 
-print(testParser(testQuery1))
+#print(testParser(testQuery1))

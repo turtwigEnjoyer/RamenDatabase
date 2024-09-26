@@ -10,20 +10,16 @@ from query import MyVisitor
 from antlr4.error.ErrorListener import ErrorListener
 
 
-#TODO: error handling
-# 'and' typed wrong gives second query but not the first
-# give an error message for things or avoid crashes entirely
-
-#fixed:
-# quotations work with spaced value entries
-# no spaced filters so no adjustments on that one
+#deals with error handling
 class SyntaxException(Exception):
     pass
 
+#also provides the user with the error and what spot in their query they had the error
 class ErrorListener(ErrorListener):
     def __init__(self):
         super(ErrorListener, self).__init__()
 
+    #error message produced for the user
     def syntaxError(self, recognizer, offendingSymbol, line, column, msg, e):
         print("Syntax error at line " + str(line) + ":" + str(column))
         print("Please enter a valid query.")
@@ -70,7 +66,7 @@ def menu():
           "Filter > Value'")
     print('All queries that contain a word with spaces in it like: Country == "South Korea" must be typed with quotes'
           ' as shown.')
-    print("Available filters are: Brand, Country, Style, Variety, Stars")
+    print("Available filters are: Brand, Country, Style, Variety, Stars, TopTen")
     print("Use 'AND' to combine up to two filters")
     print("Type 'help' for full list of available commands")
     print("Type 'quit' to quit")
