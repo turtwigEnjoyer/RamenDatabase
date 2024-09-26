@@ -17,6 +17,8 @@ from antlr4.error.ErrorListener import ErrorListener
 #fixed:
 # quotations work with spaced value entries
 # no spaced filters so no adjustments on that one
+class SyntaxException(Exception):
+    pass
 
 class ErrorListener(ErrorListener):
     def __init__(self):
@@ -25,6 +27,7 @@ class ErrorListener(ErrorListener):
     def syntaxError(self, recognizer, offendingSymbol, line, column, msg, e):
         print("Syntax error at line " + str(line) + ":" + str(column))
         print("Please enter a valid query.")
+        raise SyntaxException
 
 #Engine class contains the commands that need to be run to start up the parser and then connect it to the database
 # This is where the two parts of the project come together and work together to query the data from the database
@@ -52,13 +55,13 @@ class Engine:
             visitor = MyVisitor()
             output = visitor.visit(tree)
 
-            ramenList = self.database.Query(output)
-            self.prettyPrinter.print(ramenList)
-            return 0
-
         except Exception as e:
             # print(f"Error {e}")
             return str(e)
+
+        ramenList = self.database.Query(output)
+        self.prettyPrinter.print(ramenList)
+        return 0
 
 
 #menu function prints out all info needed by user to operate the query system
