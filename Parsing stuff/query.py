@@ -48,6 +48,13 @@ class MyVisitor(QueryVisitor):
         op = ctx.op.text
         container = QueryFilter(left, op, right)
         return container
+    #
+    # def visitCompare(self, ctx):
+    #     left = ctx.ID().getText().capitalize()
+    #     right = self.visit(ctx.val())
+    #     op = ctx.op.text
+    #     container = QueryFilter(left, op, right)
+    #     return container
 
     #visits Brand filter
     def visitBrand(self, ctx):
@@ -67,7 +74,7 @@ class MyVisitor(QueryVisitor):
 
     #visits Stars filter
     def visitStars(self, ctx):
-        return ctx.STARS().getText()
+        return ctx.STARS().getText().capitalize()
 
     # the visitID method visits the value held in the ID spot so it grabs the filter string as well as the value
     # if its a string

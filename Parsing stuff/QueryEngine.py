@@ -55,7 +55,7 @@ class Engine:
             for queryFilter in output:
                 field = queryFilter.field
                 value = queryFilter.value
-                if field == "Stars":
+                if field.Capitalize() == "Stars":
                     if not (0 <= value <= 5):
                         raise ValueError("Value must be between 0 and 5")
 
@@ -84,11 +84,11 @@ if __name__ == '__main__':
     engine = Engine()
     menu()
     query = str(input("Enter your query: ") + "\n")
-    while query != 'quit\n':
-        if query == 'help\n':
+    while query.lower() != 'quit\n':
+        if query.lower() == 'help\n':
             menu()
         else:
             engine.query_engine(query)
         query = str(input("Enter your query: ") + "\n")
     print("Goodbye!")
-    quit
+    quit()
