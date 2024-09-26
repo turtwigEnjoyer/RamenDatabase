@@ -8,6 +8,9 @@ from QueryListener import QueryListener
 from Firebase.QueryFilter import QueryFilter
 import query
 
+#Testing class for all parser
+# doesnt use our errorlistener class so still reads things as errors that do not show up in the query engine
+# tests still helped us figure out a lot about our code though
 class QueryParserTests:
     def setUp(self):
         self.lexer = None
