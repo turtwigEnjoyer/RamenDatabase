@@ -11,8 +11,15 @@ command: expr op=(AND | OR) expr NEWLINE    #printJoin
        | NEWLINE        #blank
        ;
 
-expr: ID op=('==' | '<' | '>' | '<=' | '>=' | '!=') val #compare
+expr: filter op=('==' | '<' | '>' | '<=' | '>=' | '!=') val #compare
     ;
+
+filter: BRAND          #brand
+      | COUNTRY        #country
+      | STYLE          #style
+      | VARIETY         #variety
+      | STARS           #stars
+      ;
 
 val: ID        #id
    | INT       #int
@@ -20,6 +27,12 @@ val: ID        #id
 
 AND: 'AND';
 OR: 'OR';
+
+BRAND: 'Brand';
+COUNTRY: 'Country';
+STYLE: 'Style';
+VARIETY: 'Variety';
+STARS: 'Stars';
 
 EQ: '==';
 LT: '<';

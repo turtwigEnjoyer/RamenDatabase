@@ -53,6 +53,51 @@ class QueryListener(ParseTreeListener):
         pass
 
 
+    # Enter a parse tree produced by QueryParser#brand.
+    def enterBrand(self, ctx:QueryParser.BrandContext):
+        pass
+
+    # Exit a parse tree produced by QueryParser#brand.
+    def exitBrand(self, ctx:QueryParser.BrandContext):
+        pass
+
+
+    # Enter a parse tree produced by QueryParser#country.
+    def enterCountry(self, ctx:QueryParser.CountryContext):
+        pass
+
+    # Exit a parse tree produced by QueryParser#country.
+    def exitCountry(self, ctx:QueryParser.CountryContext):
+        pass
+
+
+    # Enter a parse tree produced by QueryParser#style.
+    def enterStyle(self, ctx:QueryParser.StyleContext):
+        pass
+
+    # Exit a parse tree produced by QueryParser#style.
+    def exitStyle(self, ctx:QueryParser.StyleContext):
+        pass
+
+
+    # Enter a parse tree produced by QueryParser#variety.
+    def enterVariety(self, ctx:QueryParser.VarietyContext):
+        pass
+
+    # Exit a parse tree produced by QueryParser#variety.
+    def exitVariety(self, ctx:QueryParser.VarietyContext):
+        pass
+
+
+    # Enter a parse tree produced by QueryParser#stars.
+    def enterStars(self, ctx:QueryParser.StarsContext):
+        pass
+
+    # Exit a parse tree produced by QueryParser#stars.
+    def exitStars(self, ctx:QueryParser.StarsContext):
+        pass
+
+
     # Enter a parse tree produced by QueryParser#id.
     def enterId(self, ctx:QueryParser.IdContext):
         pass

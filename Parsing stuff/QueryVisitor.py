@@ -34,6 +34,31 @@ class QueryVisitor(ParseTreeVisitor):
         return self.visitChildren(ctx)
 
 
+    # Visit a parse tree produced by QueryParser#brand.
+    def visitBrand(self, ctx:QueryParser.BrandContext):
+        return self.visitChildren(ctx)
+
+
+    # Visit a parse tree produced by QueryParser#country.
+    def visitCountry(self, ctx:QueryParser.CountryContext):
+        return self.visitChildren(ctx)
+
+
+    # Visit a parse tree produced by QueryParser#style.
+    def visitStyle(self, ctx:QueryParser.StyleContext):
+        return self.visitChildren(ctx)
+
+
+    # Visit a parse tree produced by QueryParser#variety.
+    def visitVariety(self, ctx:QueryParser.VarietyContext):
+        return self.visitChildren(ctx)
+
+
+    # Visit a parse tree produced by QueryParser#stars.
+    def visitStars(self, ctx:QueryParser.StarsContext):
+        return self.visitChildren(ctx)
+
+
     # Visit a parse tree produced by QueryParser#id.
     def visitId(self, ctx:QueryParser.IdContext):
         return self.visitChildren(ctx)
