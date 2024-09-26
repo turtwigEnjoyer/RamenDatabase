@@ -6,6 +6,8 @@ from google.cloud.firestore_v1 import FieldFilter
 from Firebase.QueryFilter import QueryFilter
 from Firebase.Ramen import Ramen
 
+
+KEY_FILE_NAME = ("cs3050-warmup-project-17f83-firebase-adminsdk-1gomb-798ef63fc5.json")
 """ Class to create and control the database"""
 class DbInterface():
     """
@@ -13,7 +15,7 @@ class DbInterface():
     """
     def __init__(self):
         # Use a service account.
-        cred = credentials.Certificate('./cs3050-warmup-project-17f83-firebase-adminsdk-1gomb-858737ebab.json')
+        cred = credentials.Certificate(KEY_FILE_NAME)
         firebase_admin.initialize_app(cred)
         self.db = firestore.client()
         self.collection = self.db.collection("ramen_ratings")
