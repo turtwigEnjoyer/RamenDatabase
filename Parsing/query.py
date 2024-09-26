@@ -7,7 +7,6 @@ from QueryVisitor import QueryVisitor
 from QueryListener import QueryListener
 from Firebase.QueryFilter import QueryFilter
 
-
 # overwrites generated visitor from the antlr grammar to do the things we actually want it to do
 # still probably needs to be updated to fit our current use case
 #
@@ -48,13 +47,6 @@ class MyVisitor(QueryVisitor):
         op = ctx.op.text
         container = QueryFilter(left, op, right)
         return container
-    #
-    # def visitCompare(self, ctx):
-    #     left = ctx.ID().getText().capitalize()
-    #     right = self.visit(ctx.val())
-    #     op = ctx.op.text
-    #     container = QueryFilter(left, op, right)
-    #     return container
 
     #visits Brand filter
     def visitBrand(self, ctx):
@@ -102,7 +94,6 @@ class MyVisitor(QueryVisitor):
     def visitInt(self, ctx):
         return int(ctx.INT().getText())
 
-
 # Test main method that shows the use of visitor this shows all the setup for utilizing an antlr visitor class
 # Ideally nobody should need to download antlr or anything because all the classes required are pre-generated in the
 # repo. We will have to change this file to be just a class definition file for the visitor and then implement the
@@ -121,11 +112,7 @@ def main(): #test
     for x in output:
         print(x)
     return 0
-
-
 # main()
-
-
 def testParser(inputQuery):
     stream = InputStream(inputQuery)
     lexer = QueryLexer(stream)
@@ -135,10 +122,4 @@ def testParser(inputQuery):
     visitor = MyVisitor()
     visitor.visit(tree)
     return visitor.storage
-
-testQuery1 = 'Country == "South Korea" AND Stars > 4\n'
-testQuery2 = "Style == pack AND Brand == Wang"
-testQuery3 = "Variety == soup"
-testQuery4 = "Brand == 'Samyang Foods' AND Stars == 5"
-
 #print(testParser(testQuery1))

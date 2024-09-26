@@ -9,7 +9,6 @@ from Firebase.PrettyPrinter import PrettyPrinter
 from query import MyVisitor
 from antlr4.error.ErrorListener import ErrorListener
 
-
 #deals with error handling
 class SyntaxException(Exception):
     pass
